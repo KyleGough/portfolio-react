@@ -1,0 +1,76 @@
+input,
+input:focus,
+input:active,
+input:hover {
+  border-bottom: 0!important;
+  box-shadow: none!important;
+}
+
+.progress {
+  width: 100%;
+  margin-left: 5px;
+  margin-right: 5px;
+  height: 8px!important;
+  border-radius: 10px;
+  background-color: inherit;
+}
+
+.progressBar {
+  float: left;
+  height: 100%;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  text-align: center;
+  border-right: 0.25em solid white;
+  color: white;
+}
+
+@media only screen and (max-width: 1200px) {
+  .progressBar {
+    border-right-width:4px
+  }
+}
+
+@media only screen and (max-width: 992px) {
+  .progressBar {
+    border-right-width:2px
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .progressBar {
+    border-right-width:1px
+  }
+}
+
+.progressProgramming {
+  background-color: #fac6c5 !important
+}
+
+.progressProgramming > .progressBar {
+  background-color: #EF5350
+}
+
+.progressWeb {
+  background-color: #bbdffb !important
+}
+
+.progressWeb > .progressBar {
+  background-color: #42A5F5
+}
+
+.progressDatabase {
+  background-color: #ffd980 !important
+}
+
+.progressDatabase > .progressBar {
+  background-color: #FFB300
+}
+
+.progressOther {
+  background-color: #a8bac3 !important
+}
+
+.progressOther > .progressBar {
+  background-color: #607D8B
+}
