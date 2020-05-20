@@ -1,7 +1,5 @@
 import React from 'react';
 import '../App.css';
-import 'materialize-css';
-import 'materialize-css/dist/css/materialize.min.css';
 import Typography from '@material-ui/core/Typography';
 import PropTypes from 'prop-types';
 import {withStyles} from '@material-ui/core/styles';
@@ -43,16 +41,16 @@ const useStyles = theme => ({
 class ProjectIntro extends React.Component {
 
   render() {
-    const { classes, title, subtitle, date, desc, chips } = this.props;
+    const { classes, data } = this.props;
 
     return (   
         <div className={classes.section}>
-          <Typography className={classes.title} variant="h3" component="h1">{title}</Typography>
-          { subtitle ? <Typography className={classes.title} variant="h6" component="h2">{subtitle}</Typography> : null }
-          <p className={classes.date}>{date}</p>
-          <p className={classes.intro}>{desc}</p>
+          <Typography className={classes.title} variant="h3" component="h1">{data.title}</Typography>
+          { data.subtitle ? <Typography className={classes.title} variant="h6" component="h2">{data.subtitle}</Typography> : null }
+          <p className={classes.date}>{data.date}</p>
+          <p className={classes.intro}>{data.desc}</p>
           {
-            chips.map((item) => {
+            data.chips.map((item) => {
               return (
                 <Chip className={classes.chip} label={item} color="primary" variant="outlined" />
               )   
@@ -66,10 +64,7 @@ class ProjectIntro extends React.Component {
 // Higher-Order component.
 ProjectIntro.propTypes = {
     classes: PropTypes.object.isRequired,
-    title: PropTypes.string.isRequired,
-    date: PropTypes.string.isRequired,
-    desc: PropTypes.string.isRequired,
-    chips: PropTypes.array.isRequired
+    data: PropTypes.object.isRequired,
 };  
 
 export default withStyles(useStyles)(ProjectIntro);

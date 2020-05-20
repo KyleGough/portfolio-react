@@ -62,20 +62,20 @@ const useStyles = ({
 class Project extends React.Component {
     
     render() {
-        const { classes, title, subtitle, date, desc, image, alt, link, github } = this.props;
+        const { classes, data } = this.props;
         
         return (
             <Grid className={classes.root} container spacing={3}>
                 <Grid className={classes.columnBlock} container item xs={12} lg={7}>
-                    <Typography className={classes.title} variant="h5" component="h2">{title}</Typography>
-                    { subtitle ? <Typography className={classes.subtitle} variant="h6" component="h3">{subtitle}</Typography> : null }
-                    <p className={classes.date}>{date}</p>
-                    <p className={classes.desc}>{desc}</p>
-                    { link ? <Button className={classes.viewButton} href={link}>View Project</Button> : null }
-                    { github ? <IconButton className={classes.github} color="secondary" aria-label="github"><GitHubIcon /></IconButton> : null }
+                    <Typography className={classes.title} variant="h5" component="h2">{data.title}</Typography>
+                    { data.subtitle ? <Typography className={classes.subtitle} variant="h6" component="h3">{data.subtitle}</Typography> : null }
+                    <p className={classes.date}>{data.date}</p>
+                    <p className={classes.desc}>{data.desc}</p>
+                    { data.link ? <Button className={classes.viewButton} href={data.link}>View Project</Button> : null }
+                    { data.github ? <IconButton className={classes.github} color="secondary" aria-label="github"><GitHubIcon /></IconButton> : null }
                 </Grid>
                 <Grid className={classes.columnBlock} container item xs={12} lg={5}>
-                    <img className={classes.image} src={image} alt={alt} />
+                    <img className={classes.image} src={data.image} alt={data.alt} />
                 </Grid>
             </Grid>  
         );
@@ -84,9 +84,7 @@ class Project extends React.Component {
 
 Project.propTypes = {
     classes: PropTypes.object.isRequired,
-    title: PropTypes.string.isRequired,
-    date: PropTypes.string.isRequired,
-    desc: PropTypes.string.isRequired,
+    data: PropTypes.object.isRequired,
 };
 
 export default withStyles(useStyles)(Project);

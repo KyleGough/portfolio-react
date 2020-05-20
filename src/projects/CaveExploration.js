@@ -9,58 +9,23 @@ import ProjectImage from '../components/ProjectImage';
 import ImageList from '../components/ImageList';
 import Pagination from '../components/Pagination';
 import Divider from '@material-ui/core/Divider';
+import useStyles from './Styles';
+import ProjectList from './ProjectList';
 
 
-const useStyles = theme => ({
-  root: {
-    paddingBottom: "3em",
-    paddingTop: "3em",
-    paddingLeft: "4em",
-    paddingRight: "4em"
-  },
-  subtitle: {
-    marginTop: "1em",
-    marginBottom: "1em",        
-  },
-  section: {
-    paddingBottom: "2em",
-    paddingTop: "2em",
-    fontSize: "15px",
-    fontFamily: "Lato",
-  },
-  ul: {
-    marginLeft: "1em",
-    "& > li": {
-      listStyleType: "square!important",
-      listStylePosition: "outside",
-
-    }
-  },
-  link: {
-    color: "#03B0EE",
-    transitionDelay: "0.1s",
-    transitionDuration: "0.2s",
-    transitionProperty: "all",
-    transitionTimingFunction: "ease",
-    "&:hover": {
-      color: "#4CAF50"
-    },
-    whiteSpace: "nowrap",
-  },
-});
-
+const projectInfo = ProjectList["cave-exploration"];
 
 const imageData = [
   {
-    img: "/img/cave-exploration1.png",
+    url: "/img/cave-exploration1.png",
     title: "Multiple Drone Exploration"
   },
   {
-    img: "/img/cave-exploration2.png",
+    url: "/img/cave-exploration2.png",
     title: "Single Drone Exploration"
   },
   {
-    img: "/img/cave-exploration3.png",
+    url: "/img/cave-exploration3.png",
     title: "Single Drone Exploration"
   },
 ];
@@ -74,20 +39,11 @@ class CaveExploration extends React.Component {
     return (
         <Container className={classes.root} maxWidth="lg">
           
-          <ProjectIntro
-            title="Using Swarm AI to Map a Cave Network"
-            subtitle="CS310: Dissertation"
-            date="December 2018 - April 2019"
-            desc="Cave exploration is dangerous and time-consuming. This project demonstrates how swarm AI could be used in a group of autonomous flying drones to navigate and explore a cave as efficiently as possible. The project also includes realistic cave environment generation."
-            chips={["C++", "OpenGL"]}
-          />
+          <ProjectIntro data={projectInfo} />
 
           <Divider /> 
 
-          <ProjectImage
-            src="/img/cave-exploration1.png"
-            alt="Cave Exploration"
-          />
+          <ProjectImage img={imageData[0]} />
           
           <Divider /> 
 

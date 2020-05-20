@@ -21,12 +21,12 @@ const useStyles = ({
 class ProjectImage extends React.Component {
     
     render() {
-        const { classes, src, alt } = this.props;
+        const { classes, img } = this.props;
         
         return (
             <Grid className={classes.root} container spacing={1} alignItems="center" justify="center">
               <Grid container item xs={12} lg={8}>
-                <img className={classes.image} src={src} alt={alt} />
+                <img className={classes.image} src={img.url} alt={img.title} />
               </Grid>
             </Grid>
         );
@@ -35,8 +35,7 @@ class ProjectImage extends React.Component {
 
 ProjectImage.propTypes = {
     classes: PropTypes.object.isRequired,
-    src: PropTypes.string.isRequired,
-    alt: PropTypes.string.isRequired
+    img: PropTypes.object.isRequired
 };
 
 export default withStyles(useStyles)(ProjectImage);

@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import NavBar from './components/NavBar';
 import Footer from './components/Footer';
+import ScrollTop from './components/ScrollTop';
 import './index.css';
 import * as serviceWorker from './serviceWorker';
 import {BrowserRouter, Route, Switch} from 'react-router-dom';
@@ -19,6 +20,13 @@ import NotFound from './NotFound';
 
 // Project Pages.
 import CaveExploration from './projects/CaveExploration';
+import URLShortener from './projects/URLShortener';
+import GraphVisualiser from './projects/GraphVisualiser';
+import CavernMinesweeper from './projects/CavernMinesweeper';
+import BSplit from './projects/BSplit';
+import TodoList from './projects/TodoList';
+import DeliveryPlanner from './projects/DeliveryPlanner';
+import SortingVisualiser from './projects/SortingVisualiser';
 
 
 //Global Themes.
@@ -43,6 +51,7 @@ class App extends React.Component {
         <React.Fragment>
         <ThemeProvider theme={theme}>
         <CssBaseline />
+        <ScrollTop>
         <div className="App">
           <NavBar title="Kyle Gough" />
           <main>
@@ -51,12 +60,20 @@ class App extends React.Component {
               <Route path="/about" component={AboutPage} />
               <Route path="/privacy" component={PrivacyPage} />
               <Route path="/projects/cave-exploration" component={CaveExploration} />
+              <Route path="/projects/url-shortener" component={URLShortener} />
+              <Route path="/projects/graph-algorithm-visualiser" component={GraphVisualiser} />
+              <Route path="/projects/cavern-minesweeper" component={CavernMinesweeper} />
+              <Route path="/projects/bsplit" component={BSplit} />
+              <Route path="/projects/todo-list" component={TodoList} />
+              <Route path="/projects/delivery-route-planner" component={DeliveryPlanner} />
+              <Route path="/projects/sorting-algorithm-visualiser" component={SortingVisualiser} />
               <Route path="/projects" component={ProjectsPage} />
               <Route component={NotFound} />
             </Switch>
           </main>
           <Footer />
         </div>
+        </ScrollTop>
         </ThemeProvider>
         </React.Fragment>
       </BrowserRouter>

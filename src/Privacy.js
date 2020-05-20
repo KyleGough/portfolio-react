@@ -1,7 +1,5 @@
 import React from 'react';
 import './App.css';
-import 'materialize-css';
-import 'materialize-css/dist/css/materialize.min.css';
 import Container from '@material-ui/core/Container';
 import Typography from '@material-ui/core/Typography';
 import PropTypes from 'prop-types';
