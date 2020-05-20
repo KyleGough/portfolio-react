@@ -56,12 +56,13 @@ const useStyles = theme => ({
     grid: {
         marginBottom: "1em",
         marginTop: "1em",
+        textAlign: "center"
     },
     email: {
         fontSize: 19,
         lineHeight: 19,
         verticalAlign: "bottom"
-    }
+    },
 });
 
 
@@ -74,9 +75,11 @@ class Footer extends React.Component {
                 <Container className={classes.links} maxWidth="lg">
                     <Grid container spacing={2}>
                         <Grid className={classes.grid} item xs={12} lg={4}>
+                        <Container maxWidth="sm">
                             <h5 className={classes.footerTitle}>About Me</h5>
                             <p>4<sup>th</sup> Year Computer Science MEng Student at Warwick University. Programmer and Web Developer with interests in Bouldering, Cycling, Guitar, Movies and Physics.</p>
                             <EmailIcon className={classes.email}/><span>  kylegough@gmail.com</span>
+                        </Container>
                         </Grid>
                         <Grid className={classes.grid} item xs={6} lg={4}>
                             <h5 className={classes.footerTitle}>Projects</h5>
@@ -92,10 +95,10 @@ class Footer extends React.Component {
                         <Grid className={classes.grid} item xs={6} lg={4}>
                                 <h5 className={classes.footerTitle}>Website</h5>
                                 <ul>
-                                    <li><Link className={classes.link} variant="inherit" to="/CV">CV</Link></li>
+                                    <li><a className={classes.link} target="_blank" rel="noopener noreferrer" href="CV.pdf">CV</a></li>
                                     <li><Link className={classes.link} variant="inherit" to="/about">Skills</Link></li>
                                     <li><Link className={classes.link} variant="inherit" to="/projects">Projects</Link></li>
-                                    <li><Link className={classes.link} variant="inherit" to="/privacy-policy">Privacy Policy</Link></li>
+                                    <li><Link className={classes.link} variant="inherit" to="/privacy">Privacy Policy</Link></li>
                                     <li><a className={classes.link} href="http://github.com/KyleGough" target="_blank" rel="noopener noreferrer">
                                         <IconButton className={classes.iconLink} color="inherit">
                                             <GitHubIcon />
@@ -105,7 +108,7 @@ class Footer extends React.Component {
                         </Grid>
                     </Grid>
                 </Container>
-                <Container className={classes.copyright} maxWidth="xl">
+                <Container className={classes.copyright} maxWidth={false}>
                     <p>© 2018 - 2020 Kyle Gough</p>
                 </Container>
             </footer>

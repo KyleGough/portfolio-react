@@ -8,10 +8,18 @@ import * as serviceWorker from './serviceWorker';
 import {BrowserRouter, Route, Switch} from 'react-router-dom';
 import { createMuiTheme, ThemeProvider, responsiveFontSizes } from '@material-ui/core/styles';
 
-// Website pages.
+// Main Pages.
 import HomePage from './HomePage';
 import AboutPage from './About';
+import ProjectsPage from './Projects';
+import PrivacyPage from  './Privacy';
+
+// Error Pages.
 import NotFound from './NotFound';
+
+// Project Pages.
+import CaveExploration from './projects/CaveExploration';
+
 
 //Global Themes.
 const theme = responsiveFontSizes(createMuiTheme({
@@ -22,13 +30,8 @@ const theme = responsiveFontSizes(createMuiTheme({
     h4: { fontFamily: "Merriweather" },
     h5: { fontFamily: "Merriweather" },
     h6: { fontFamily: "Merriweather" },
-    //h1: { fontFamily: "-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif" },
-    //h2: { fontFamily: "-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif" },
-    //h3: { fontFamily: "-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif" },
-    //h4: { fontFamily: "-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif" },
-    //h5: { fontFamily: "-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif" },
-    //h6: { fontFamily: "-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif" },
-  },
+    p: {  fontFamily: "Lato" },
+  }
 }));
 
 
@@ -46,6 +49,9 @@ class App extends React.Component {
             <Switch>
               <Route exact path='/' component={HomePage} />
               <Route path="/about" component={AboutPage} />
+              <Route path="/privacy" component={PrivacyPage} />
+              <Route path="/projects/cave-exploration" component={CaveExploration} />
+              <Route path="/projects" component={ProjectsPage} />
               <Route component={NotFound} />
             </Switch>
           </main>
