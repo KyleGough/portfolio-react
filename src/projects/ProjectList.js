@@ -4,6 +4,8 @@ const ProjectList = {
     title: "Portfolio",
     date: "December 2016 - May 2020",
     desc: "",
+    image: "/img/portfolio1.png",
+    alt: "Old portfolio version",
     link: "/projects/portfolio",
     chips: ["React", "JavaScript", "Material UI", "HTML", "CSS", "Node", "Sass", "Less", "Bootstrap", "Materialize"]
   },
@@ -48,11 +50,11 @@ const ProjectList = {
   },
 
   "roller-coaster": {
-    title: "OpenGL Roller Coaster",
+    title: "Roller Coaster",
     subtitle: "CS324: Computer Graphics",
     date: "December 2018 - January 2019",
     desc: "A simulation of a 3-car roller coaster which traverses a small track featuring a lift hill, drop, loop-the-loop and turns. The coaster can be viewed from a first-person perspective in each of the carts, as well as additional views that follow the carts round the track.",
-    image: "/img/coaster1.png",
+    image: "/img/roller-coaster1.png",
     alt: "Roller Coaster",
     link: "/projects/roller-coaster",
     chips: ["C++", "OpenGL"]

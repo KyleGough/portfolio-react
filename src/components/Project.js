@@ -72,7 +72,14 @@ class Project extends React.Component {
                     <p className={classes.date}>{data.date}</p>
                     <p className={classes.desc}>{data.desc}</p>
                     { data.link ? <Button className={classes.viewButton} href={data.link}>View Project</Button> : null }
-                    { data.github ? <IconButton className={classes.github} color="secondary" aria-label="github"><GitHubIcon /></IconButton> : null }
+                    { data.github ? 
+                      <a href={data.github} target="_blank" rel="noopener noreferrer">
+                        <IconButton className={classes.github} color="secondary" aria-label="github">
+                          <GitHubIcon />
+                        </IconButton>
+                      </a>
+                      : null
+                    }
                 </Grid>
                 <Grid className={classes.columnBlock} container item xs={12} lg={5}>
                     <img className={classes.image} src={data.image} alt={data.alt} />

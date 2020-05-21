@@ -7,6 +7,7 @@ import {withStyles} from '@material-ui/core/styles';
 import {Link} from 'react-router-dom';
 import Skill from './components/Skill';
 import Divider from '@material-ui/core/Divider';
+import ArrowRightAltIcon from '@material-ui/icons/ArrowRightAlt';
 
 const useStyles = theme => ({
   root: {
@@ -50,6 +51,11 @@ const useStyles = theme => ({
   },
   centre: {
     textAlign: "center"
+  },
+  arrow: {
+    fontSize: "0.7rem",
+    marginLeft: "0.5em",
+    marginRight: "0.5em"
   }
 });
 
@@ -239,7 +245,16 @@ class About extends React.Component {
               <li>CS131: Mathematics for Computer Scientists II</li>
               <li>CS132: Computer Organisation and Architecture</li>
               <li>CS133: Professional Skills</li>
-              <li>CS139: Web Development Technologies</li>
+              <li>
+                CS139: Web Development Technologies
+                <ArrowRightAltIcon className={classes.arrow} />
+                <Link className={classes.link} to="/projects/todo-list">
+                  To Do List
+                </Link>
+                , <Link className={classes.link} to="/projects/bsplit">
+                  BSplit
+                </Link>
+                </li>
               <li>CS140: Computer Security</li>
             </ul>
 
@@ -251,15 +266,33 @@ class About extends React.Component {
               <li>CS259: Formal Languages</li>
               <li>CS260: Algorithms</li>
               <li>CS261: Software Engineering</li>
-              <li>CS262: Logic and Verification</li>
+              <li>
+                CS262: Logic and Verification
+                <ArrowRightAltIcon className={classes.arrow} />
+                <Link className={classes.link} to="/projects/rscbot">
+                  RSCBot
+                </Link>
+                </li>
               <li>CS263: Cyber Security</li>
             </ul>
 
             <Typography className={classes.subtitle} variant="h6" component="h3">Year 3 Modules</Typography>
             <ul className={classes.listitem}>
-              <li>CS310: Computer Science Project (Dissertation)</li>
+              <li>
+                CS310: Computer Science Project (Dissertation) 
+                <ArrowRightAltIcon className={classes.arrow} />
+                <Link className={classes.link} to="/projects/cave-exploration">
+                  Using Swarm AI to Map a Cave Network
+                </Link>
+              </li>
               <li>CS313: Mobile Robotics</li>
-              <li>CS324: Computer Graphics</li>
+              <li>
+                CS324: Computer Graphics
+                <ArrowRightAltIcon className={classes.arrow} />
+                <Link className={classes.link} to="/projects/roller-coaster">
+                  Roller Coaster
+                </Link>
+              </li>
               <li>CS331: Neural Computing</li>
               <li>CS342: Machine Learning</li>
               <li>CS352: Project Management</li>
@@ -269,7 +302,13 @@ class About extends React.Component {
             <Typography className={classes.subtitle} variant="h6" component="h3">Year 4 Modules</Typography>
             <ul className={classes.listitem}>
               <li>CS402: High Peformance Computing</li>
-              <li>CS407: Group Project</li>
+              <li>
+                CS407: Group Project
+                <ArrowRightAltIcon className={classes.arrow} />
+                <Link className={classes.link} to="/projects/lucidlab">
+                  LucidLab
+                </Link>
+              </li>
               <li>CS413: Image and Video Analysis</li>
               <li>CS419: Quantum Computing</li>
               <li>CS904: Computational Biology</li>

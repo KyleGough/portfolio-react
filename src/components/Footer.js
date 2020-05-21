@@ -85,7 +85,7 @@ class Footer extends React.Component {
                                 <li><Link className={classes.link} variant="inherit" to="/projects">All Projects</Link></li>
                                 <li><Link className={classes.link} variant="inherit" to="/projects/sudoku">Logical Sudoku Solver</Link></li>
                                 <li><Link className={classes.link} variant="inherit" to="/projects/cave-exploration">Cave Exploration</Link></li>
-                                <li><Link className={classes.link} variant="inherit" to="/projects/sorting-visualiser">Sorting Visualiser</Link></li>
+                                <li><Link className={classes.link} variant="inherit" to="/projects/sorting-algorithm-visualiser">Sorting Visualiser</Link></li>
                                 <li><Link className={classes.link} variant="inherit" to="/projects/graph-algorithm-visualiser">Graph Algorithm Visualiser</Link></li>
                                 <li><Link className={classes.link} variant="inherit" to="/projects/bsplit">BSplit</Link></li>
                             </ul>

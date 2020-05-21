@@ -19,7 +19,13 @@ import PrivacyPage from  './Privacy';
 import NotFound from './NotFound';
 
 // Project Pages.
+import Portfolio from './projects/Portfolio';
+import LucidLab from './projects/LucidLab';
+import Sudoku from './projects/Sudoku';
+import Qurve from './projects/Qurve';
 import CaveExploration from './projects/CaveExploration';
+import RollerCoaster from './projects/RollerCoaster';
+import RSCBot from './projects/RSCBot';
 import URLShortener from './projects/URLShortener';
 import GraphVisualiser from './projects/GraphVisualiser';
 import CavernMinesweeper from './projects/CavernMinesweeper';
@@ -59,7 +65,13 @@ class App extends React.Component {
               <Route exact path='/' component={HomePage} />
               <Route path="/about" component={AboutPage} />
               <Route path="/privacy" component={PrivacyPage} />
+              <Route path="/projects/portfolio" component={Portfolio} />
+              <Route path="/projects/lucidlab" component={LucidLab} />
+              <Route path="/projects/sudoku" component={Sudoku} />
+              <Route path="/projects/qurve" component={Qurve} />
               <Route path="/projects/cave-exploration" component={CaveExploration} />
+              <Route path="/projects/roller-coaster" component={RollerCoaster} />
+              <Route path="/projects/rscbot" component={RSCBot} />
               <Route path="/projects/url-shortener" component={URLShortener} />
               <Route path="/projects/graph-algorithm-visualiser" component={GraphVisualiser} />
               <Route path="/projects/cavern-minesweeper" component={CavernMinesweeper} />

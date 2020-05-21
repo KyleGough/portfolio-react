@@ -29,8 +29,15 @@ class NotFound extends React.Component {
         <Typography variant="h6" className={classes.title}>
             <Link className={classes.link} variant="inherit" to="/">{"Click here to return to the homepage."}</Link>
         </Typography>
-        <br /><br /><br /><br /><br /><br />
-        <br /><br /><br /><br /><br /><br />
+        homepage
+        <br />
+        favicon
+        <br />
+        https
+        <br />
+        materialize css in index
+        <br />
+        qurve, sudoku, lucidlab, portfolio
       </Container>
     );
   }

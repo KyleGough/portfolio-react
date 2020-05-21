@@ -65,8 +65,8 @@ class CaveExploration extends React.Component {
           <Pagination
             previousTitle="OpenGL Roller Coaster"
             previousLink="/projects/roller-coaster"
-            nextTitle="Logical Sudoku Solver"
-            nextLink="/projects/sudoku"
+            nextTitle="QuRVe"
+            nextLink="/projects/qurve"
           />
 
       </Container>

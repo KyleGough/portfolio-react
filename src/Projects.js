@@ -4,7 +4,6 @@ import Container from '@material-ui/core/Container';
 import Typography from '@material-ui/core/Typography';
 import PropTypes from 'prop-types';
 import {withStyles} from '@material-ui/core/styles';
-import {Link} from 'react-router-dom';
 import Divider from '@material-ui/core/Divider';
 import Project from './components/Project';
 import ProjectList from './projects/ProjectList';

@@ -5,16 +5,50 @@ import Typography from '@material-ui/core/Typography';
 import PropTypes from 'prop-types';
 import {withStyles} from '@material-ui/core/styles';
 import {Link} from 'react-router-dom';
+import LocationDisabledIcon from '@material-ui/icons/LocationDisabled';
 
 const useStyles = theme => ({
   root: {
-    marginBottom: "5em",
+    paddingBottom: "3em",
+    paddingTop: "3em",
+    paddingLeft: "4em",
+    paddingRight: "4em"
   },
   title: {
-    marginTop: "2em",
-    marginBottom: "2em",      
+    fontSize: "8rem",
+    color: "rgba(0, 0, 0, 0.40)",
   },
-  desc: {}
+  subtitle: {
+    marginTop: "1em",
+    marginBottom: "1em",        
+  },
+  section: {
+    paddingBottom: "2em",
+    paddingTop: "2em",
+    fontSize: "15px",
+    fontFamily: "Lato",
+  },
+  link: {
+    color: "#03B0EE",
+    transitionDelay: "0.1s",
+    transitionDuration: "0.2s",
+    transitionProperty: "all",
+    transitionTimingFunction: "ease",
+    "&:hover": {
+      color: "#4CAF50"
+    },
+    whiteSpace: "nowrap",
+  },
+  intro: {
+    marginBottom: "3em"
+  },
+  notFound: {
+    textAlign: "center",
+    color: "rgba(0, 0, 0, 0.40)",
+    fontSize: "20rem",
+    marginTop: "0.33em",
+    marginBottom: "0.33em"
+  }
 });
 
 class NotFound extends React.Component {
@@ -24,11 +58,19 @@ class NotFound extends React.Component {
 
     return (
       <Container className={classes.root} maxWidth="lg">
-        <Typography className={classes.title} variant="h2" component="h1">404 Page Not Found</Typography>
-        <Typography className={classes.desc} variant="h5" component="h2">The page you have requested cannot be found. Please check your link and try again.</Typography>
-        <Typography variant="h6" className={classes.title}>
-            <Link className={classes.link} variant="inherit" to="/">{"Click here to return to the homepage."}</Link>
-        </Typography>
+        <div className={classes.section}>
+          <Typography className={classes.title} variant="h3" component="h1">404</Typography>
+          <Typography className={classes.subtitle} variant="h3" component="h2">Page Not Found</Typography>
+          <p className={classes.intro}>
+            The requested page does not exist. You can use the following links to navigate:
+          </p>
+
+          <Link className={classes.link} to="/">Return to the homepage</Link><br />
+          <Link className={classes.link} to="/about">View my skills</Link><br />
+          <Link className={classes.link} to="/projects">View all my projects</Link><br />
+          <Link className={classes.link} to="/CV.pdf" target="_blank" rel="noopener noreferrer">View my CV</Link><br />
+          <a className={classes.link} href="http://github.com/KyleGough" target="_blank" rel="noopener noreferrer">View my GitHub</a>
+        </div>
       </Container>
     );
   }
