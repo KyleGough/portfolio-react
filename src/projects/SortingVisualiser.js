@@ -99,6 +99,8 @@ class SortingVisualiser extends React.Component {
 
           <ImageList data={imageData} />
 
+          <Divider />
+
           <Pagination
             nextTitle="Delivery Route Planner"
             nextLink="/projects/delivery-route-planner"

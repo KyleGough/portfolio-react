@@ -65,6 +65,8 @@ class DeliveryPlanner extends React.Component {
 
           <ImageList data={imageData} />
 
+          <Divider />
+
           <Pagination
             previousTitle="Sorting Algorithm Visualiser"
             previousLink="/projects/sorting-algorithm-visualiser"

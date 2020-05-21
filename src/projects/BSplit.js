@@ -76,6 +76,8 @@ class BSplit extends React.Component {
 
           <ImageList data={imageData} />
 
+          <Divider />
+
           <Pagination
             previousTitle="To Do List"
             previousLink="/projects/todo-list"

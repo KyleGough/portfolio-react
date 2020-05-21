@@ -57,6 +57,8 @@ class CavernMinesweeper extends React.Component {
 
           <ImageList data={imageData} />
 
+          <Divider />
+
           <Pagination
             previousTitle="BSplit"
             previousLink="/projects/bsplit"

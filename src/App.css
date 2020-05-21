@@ -9,6 +9,10 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+a {
+  text-decoration: none;
+}
+
 input,
 input:focus,
 input:active,
@@ -84,4 +88,23 @@ input:hover {
 
 .progressOther > .progressBar {
   background-color: #607D8B
+}
+
+.carousel .slide .legend {
+  font-family: "Merriweather"!important;
+  opacity: 0.5!important;
+  font-size: 4vw!important;
+  margin-left: -50%!important;
+  width: 100%!important;
+  border-radius: 0!important;
+  height: 100%!important;
+  bottom: 0px!important;
+  padding: 25% 0 0 0!important;
+  margin-bottom: 0!important;
+  line-height: 100%!important;
+  vertical-align: middle!important;
+}
+
+.control-dots {
+  padding-left: 0!important;
 }

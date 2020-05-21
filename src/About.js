@@ -11,10 +11,10 @@ import ArrowRightAltIcon from '@material-ui/icons/ArrowRightAlt';
 
 const useStyles = theme => ({
   root: {
-    paddingBottom: "3em",
-    paddingTop: "3em",
-    paddingLeft: "4em",
-    paddingRight: "4em"
+    padding: "3em 4em 3em 4em",
+    [theme.breakpoints.down("sm")]: {
+      padding: "1em 2em 1em 2em",
+    },
   },
   title: {
     marginTop: "1em",
@@ -30,10 +30,12 @@ const useStyles = theme => ({
     fontSize: "15px",
     fontFamily: "Lato",
   },
-  listitem: {
+  listItem: {
     fontSize: "14px",
     fontFamily: "Lato",
-    marginBottom: "3em"
+    marginBottom: "3em",
+    paddingLeft: 0,
+    listStylePosition: "inside"
   },
   link: {
     color: "#03B0EE",
@@ -77,9 +79,9 @@ const skillsWeb = [
   ["JavaScript", "90", "Portfolio, LucidLab, QuRVe, Graph Algorithm Visualiser, RSCBot", "Confident"],
   ["HTML", "90", "Portfolio, BSplit, To Do List", "Confident"],
   ["CSS", "90", "Portfolio, LucidLab, QuRVe, BSplit", "Confident"],
-  ["Sass", "50", "Portfolio*", "Comfortable"],
+  ["Sass", "50", "Portfolio", "Comfortable"],
   ["Less", "50", "QuRVe, React Minesweeper", "Comfortable"],
-  ["PHP", "55", "BSplit, Portfolio*", "Comfortable"]
+  ["PHP", "55", "BSplit, Portfolio", "Comfortable"]
 ];
 
 // List of web frameworks and libraries.
@@ -87,8 +89,8 @@ const skillsWebOther = [
   ["React", "65", "Portfolio, LucidLab, QuRVe", "Comfortable"],
   ["Node.js", "60", "Portfolio, LucidLab, QuRVe, URL Shortener", "Comfortable"],
   ["jQuery", "60", "BSplit, To Do List", "Comfortable"],
-  ["Bootstrap", "65", "BSplit, To Do List, Portfolio*", "Comfortable"],
-  ["Materialize", "60", "Portfolio*", "Comfortable"],
+  ["Bootstrap", "65", "BSplit, To Do List, Portfolio", "Comfortable"],
+  ["Materialize", "60", "Portfolio", "Comfortable"],
   ["Material UI", "80", "LucidLab, Portfolio", "Confident"],
   ["Webix", "55", "QuRVe", "Comfortable"]
 ];
@@ -235,10 +237,10 @@ class About extends React.Component {
           <Divider />
 
           <div className={classes.section}>
-            <Typography className={classes.subtitle} variant="h4" component="h2">Modules Taken</Typography>
+            <Typography className={classes.subtitle} variant="h4" component="h2">University Modules</Typography>
             
             <Typography className={classes.subtitle} variant="h6" component="h3">Year 1 Modules</Typography>
-            <ul className={classes.listitem}>
+            <ul className={classes.listItem}>
               <li>CS118: Programming for Computer Scientists</li>
               <li>CS126: Design of Information Structures</li>
               <li>CS130: Mathematics for Computer Scientists I</li>
@@ -259,7 +261,7 @@ class About extends React.Component {
             </ul>
 
             <Typography className={classes.subtitle} variant="h6" component="h3">Year 2 Modules</Typography>
-            <ul className={classes.listitem}>
+            <ul className={classes.listItem}>
               <li>CS241: Operating Systems and Computer Networks</li>
               <li>CS256: Functional Programming</li>
               <li>CS258: Database Systems</li>
@@ -277,7 +279,7 @@ class About extends React.Component {
             </ul>
 
             <Typography className={classes.subtitle} variant="h6" component="h3">Year 3 Modules</Typography>
-            <ul className={classes.listitem}>
+            <ul className={classes.listItem}>
               <li>
                 CS310: Computer Science Project (Dissertation) 
                 <ArrowRightAltIcon className={classes.arrow} />
@@ -300,7 +302,7 @@ class About extends React.Component {
             </ul>
 
             <Typography className={classes.subtitle} variant="h6" component="h3">Year 4 Modules</Typography>
-            <ul className={classes.listitem}>
+            <ul className={classes.listItem}>
               <li>CS402: High Peformance Computing</li>
               <li>
                 CS407: Group Project

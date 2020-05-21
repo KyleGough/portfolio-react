@@ -79,6 +79,8 @@ class RSCBot extends React.Component {
 
           <ImageList data={imageData} />
 
+          <Divider />
+
           <Pagination
             previousTitle="URL Shortener"
             previousLink="/projects/url-shortener"

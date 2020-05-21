@@ -61,6 +61,11 @@ const useStyles = theme => ({
         lineHeight: 19,
         verticalAlign: "bottom"
     },
+    linkList: {
+        textAlign: "center",
+        listStyleType: "none",
+        paddingLeft: 0
+    }
 });
 
 
@@ -81,7 +86,7 @@ class Footer extends React.Component {
                         </Grid>
                         <Grid className={classes.grid} item xs={6} lg={4}>
                             <h5 className={classes.footerTitle}>Projects</h5>
-                            <ul>
+                            <ul className={classes.linkList}>
                                 <li><Link className={classes.link} variant="inherit" to="/projects">All Projects</Link></li>
                                 <li><Link className={classes.link} variant="inherit" to="/projects/sudoku">Logical Sudoku Solver</Link></li>
                                 <li><Link className={classes.link} variant="inherit" to="/projects/cave-exploration">Cave Exploration</Link></li>
@@ -92,11 +97,11 @@ class Footer extends React.Component {
                         </Grid>
                         <Grid className={classes.grid} item xs={6} lg={4}>
                                 <h5 className={classes.footerTitle}>Website</h5>
-                                <ul>
+                                <ul className={classes.linkList}>
                                     <li><a className={classes.link} target="_blank" rel="noopener noreferrer" href="CV.pdf">CV</a></li>
                                     <li><Link className={classes.link} variant="inherit" to="/about">Skills</Link></li>
                                     <li><Link className={classes.link} variant="inherit" to="/projects">Projects</Link></li>
-                                    <li><Link className={classes.link} variant="inherit" to="/privacy">Privacy Policy</Link></li>
+                                    <li><Link className={classes.link} variant="inherit" to="/privacy">Privacy</Link></li>
                                     <li><a className={classes.link} href="http://github.com/KyleGough" target="_blank" rel="noopener noreferrer">
                                         <IconButton className={classes.iconLink} color="inherit">
                                             <GitHubIcon />

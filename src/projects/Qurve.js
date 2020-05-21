@@ -1,12 +1,9 @@
 import React from 'react';
 import '../App.css';
 import Container from '@material-ui/core/Container';
-import Typography from '@material-ui/core/Typography';
 import PropTypes from 'prop-types';
 import {withStyles} from '@material-ui/core/styles';
 import ProjectIntro from '../components/ProjectIntro';
-import ProjectImage from '../components/ProjectImage';
-import ImageList from '../components/ImageList';
 import Pagination from '../components/Pagination';
 import Divider from '@material-ui/core/Divider';
 import useStyles from './Styles';
@@ -35,11 +32,13 @@ class Qurve extends React.Component {
 
           <Divider /> 
 
+          {/*
           <ProjectImage img={imageData[0]} />
           
           <Divider /> 
 
           <ImageList data={imageData} />
+          */}
 
           <Pagination
             previousTitle="Cave Exploration"

@@ -60,6 +60,8 @@ class URLShortener extends React.Component {
 
           <ImageList data={imageData} />
 
+          <Divider />
+
           <Pagination
             previousTitle="Graph Algorithm Visualiser"
             previousLink="/projects/graph-algorithm-visualiser"

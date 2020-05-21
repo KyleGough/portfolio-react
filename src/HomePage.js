@@ -4,16 +4,20 @@ import Container from '@material-ui/core/Container';
 import Typography from '@material-ui/core/Typography';
 import PropTypes from 'prop-types';
 import {withStyles} from '@material-ui/core/styles';
+import Button from '@material-ui/core/Button';
 import {Link} from 'react-router-dom';
 import Divider from '@material-ui/core/Divider';
+import Grid from '@material-ui/core/Grid';
+import { Carousel } from 'react-responsive-carousel';
+import "react-responsive-carousel/lib/styles/carousel.min.css"; 
 
 
 const useStyles = theme => ({
   root: {
-    paddingBottom: "3em",
-    paddingTop: "3em",
-    paddingLeft: "4em",
-    paddingRight: "4em"
+    padding: "3em 4em 3em 4em",
+    [theme.breakpoints.down("sm")]: {
+      padding: "1em 2em 1em 2em",
+    },
   },
   title: {
     marginTop: "1em",
@@ -50,8 +54,55 @@ const useStyles = theme => ({
   },
   centre: {
     textAlign: "center"
+  },
+  imgShowcase: {
+    paddingBottom: "3em",
+  },
+  linkButton: {
+    marginTop: "1em",
+    background: "linear-gradient(149deg, rgba(238,78,45,1) 0%, rgba(231,133,8,1) 60%, rgba(233,118,14,1) 100%)", 
+    borderRadius: 3,
+    border: 0,
+    color: "white",
+    height: 48,
+    padding: "0 30px",
+    boxShadow: "0 3px 5px 2px rgba(255, 105, 135, .3)",
+    textTransform: "none",
+    fontFamily: "Lato",
+    fontSize: "1rem",
+    fontWeight: 375,
+  },
+  gridLink: {
+    textAlign: "center",
+    "& > *": {
+      display: "inline-block"
+    }
+  },
+  linkDesc: {
+    fontFamily: "Merriweather",
+    marginTop: "1.25em"
   }
 });
+
+const imageShowcase = [
+  {
+    src: "/img/sudoku1.png",
+    title: "Logical Sudoku Solver"
+  },
+  {
+    src: "/img/cave-exploration1.png",
+    title: "Cave Exploration"
+  },
+  {
+    src: "/img/sorting-algorithm-visualiser1.png",
+    title: "Sorting Algorithm Visualiser"
+  },
+  {
+    src: "/img/bsplit1.png",
+    title: "Bill Splitter"
+  }
+];
+
 
 class HomePage extends React.Component {
 
@@ -61,32 +112,56 @@ class HomePage extends React.Component {
     return (
       <Container className={classes.root} maxWidth="lg">
 
+        <div className={classes.imgShowcase}>
+          <Carousel
+            autoPlay={true}
+            infiniteLoop={true}
+            showStatus={false}
+            showThumbs={false}
+            showArrows={false}
+          >            
+            {
+              imageShowcase.map((image) => (
+                <React.Fragment>
+                  <img src={image.src} alt={image.title} />
+                  <p className="legend">{image.title}</p>
+                </React.Fragment>
+              ))
+            }
+          </Carousel>
+        </div>
+        
+        <Divider />
+                
         <div className={classes.section}>
-          <Typography className={classes.title} variant="h3" component="h1">Kyle Gough</Typography>
           <p className={classes.intro}>
-            Currently, I am a 4<sup>th</sup> year Computer Science MEng student at the University of Warwick.
-            I enjoy learning new languages, frameworks and technologies outside of the regular
-            university ciriculum such as: C#, Ruby, Node, React, Zsh, Sass, Bootstrap, Materialize,
-            Material UI and MongoDB. I have also created some projects using
-            these languages where I feel confident enough. Furthermore, I have been priviledged
-            enough to have undertaken both a spring week and summer internship with Bank of America,
-            and I have accepted an offer to continue working there starting from July 2020.
+            Hello and welcome to my portfolio website showcasing my programming projects. 
+            I'm a 4<sup>th</sup> year Computer Science MEng student at the University of Warwick
+            who enjoys programming and web development. My most recent projects include a complete rebuild of this website in
+            React and a logical Sudoku solver written in Python.
           </p>
-          <p className={classes.centre}>For a more compact overview you can view my CV <a className={classes.link} target="_blank" rel="noopener noreferrer" href="CV.pdf">here.</a></p>  
-          <p className={classes.centre}>You can view a list of my projects <a className={classes.link} href="projects/">here.</a></p>
+       
+          <Grid className={classes.gridLink} container spacing={3}>
+            <Grid container item xs={12} sm={6}>
+              <Link to="/projects">
+                <Button className={classes.linkButton}>Project List</Button>
+              </Link>
+              <p className={classes.linkDesc}>View a list of all my programming projects</p>
+            </Grid>
+            <Grid className={classes.columnBlock} container item xs={12} sm={6}>
+              <Link to="/about">
+                <Button className={classes.linkButton}>About Me</Button>
+              </Link>  
+              <p className={classes.linkDesc}>View my skills and additional information</p>
+            </Grid>
+          </Grid>  
         </div>
 
-        <Divider />
-
-        homepage
-        <br />
         https
         <br />
-        materialize css in index
+        sudoku images
         <br />
-        qurve, sudoku, lucidlab
-        <br />
-        github link on project pages
+        hosting
       </Container>
     );
   }

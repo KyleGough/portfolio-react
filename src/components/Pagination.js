@@ -6,12 +6,15 @@ import ArrowBackIosIcon from '@material-ui/icons/ArrowBackIos';
 import ArrowForwardIosIcon from '@material-ui/icons/ArrowForwardIos';
 
 
-const useStyles = ({
+const useStyles = theme => ({
     section: {
         paddingBottom: "4em",
         paddingTop: "2em",
         fontSize: "15px",
         fontFamily: "Lato",
+        [theme.breakpoints.down("sm")]: {
+          paddingBottom: "1em"
+        }
     },
     link: {
         color: "#03B0EE",
@@ -23,14 +26,23 @@ const useStyles = ({
           color: "#4CAF50"
         },
         whiteSpace: "nowrap",
+        [theme.breakpoints.down("sm")]: {
+          display: "inline-block" 
+        }
     },
     deadLink: {
         color: "rgba(0, 0, 0, 0.40)",
+        [theme.breakpoints.down("sm")]: {
+          display: "inline-block"
+        }
     },
     leftArrow: {
         float: "left",
         marginTop: "1.2em",
-        marginRight: "1em"
+        marginRight: "1em",
+        [theme.breakpoints.down("sm")]: {
+          marginRight: "0.33em"
+        },
     },
     previousLink: {
         float: "left",
@@ -39,7 +51,10 @@ const useStyles = ({
     rightArrow: {
         float: "right",
         marginTop: "1.2em",
-        marginLeft: "1em"
+        marginLeft: "1em",
+        [theme.breakpoints.down("sm")]: {
+          marginLeft: "0.33em"
+        }
     },
     nextLink: {
         float: "right",
@@ -47,6 +62,11 @@ const useStyles = ({
     },
     small: {
         fontSize: "12.5px"
+    },
+    linkWrapper: {
+      [theme.breakpoints.down("sm")]: {
+        textAlign: "center"
+      }
     }
 });
 
@@ -59,41 +79,49 @@ class Pagination extends React.Component {
         return (
             <div className={classes.section}>
               { previousLink ? 
-                <Link className={classes.link} to={previousLink}> 
-                  <ArrowBackIosIcon className={classes.leftArrow} />
-                  <p className={classes.previousLink}>
-                    <span className={classes.small}>Previous Project</span>
-                    <br />
-                    {previousTitle}
-                  </p>
-                </Link>
+                <div className={classes.linkWrapper}>
+                  <Link className={classes.link} to={previousLink}> 
+                    <ArrowBackIosIcon className={classes.leftArrow} />
+                    <p className={classes.previousLink}>
+                      <span className={classes.small}>Previous Project</span>
+                      <br />
+                      {previousTitle}
+                    </p>
+                  </Link>
+                </div>
                 :
-                <div className={classes.deadLink}>
-                  <ArrowBackIosIcon className={classes.leftArrow} />
-                  <p className={classes.previousLink}>
-                    <span className={classes.small}>Previous Project</span>
-                    <br />
-                    -
-                  </p>
+                <div className={classes.linkWrapper}>
+                  <div className={classes.deadLink}>
+                    <ArrowBackIosIcon className={classes.leftArrow} />
+                    <p className={classes.previousLink}>
+                      <span className={classes.small}>Previous Project</span>
+                      <br />
+                      -
+                    </p>
+                  </div>
                 </div>
               }     
               { nextLink ? 
-                <Link className={classes.link} to={nextLink}> 
-                  <ArrowForwardIosIcon className={classes.rightArrow} />
-                  <p className={classes.nextLink}>
-                    <span className={classes.small}>Next Project</span>
-                    <br />
-                    {nextTitle}
-                  </p>
-                </Link>
+                <div className={classes.linkWrapper}>
+                  <Link className={classes.link} to={nextLink}> 
+                    <ArrowForwardIosIcon className={classes.rightArrow} />
+                    <p className={classes.nextLink}>
+                      <span className={classes.small}>Next Project</span>
+                      <br />
+                      {nextTitle}
+                    </p>
+                  </Link>
+                </div>
                 :
-                <div className={classes.deadLink}>
-                  <ArrowForwardIosIcon className={classes.rightArrow} />
-                  <p className={classes.nextLink}>
-                    <span className={classes.small}>Next Project</span>
-                    <br />
-                    -
-                  </p>
+                <div className={classes.linkWrapper}>
+                  <div className={classes.deadLink}>
+                    <ArrowForwardIosIcon className={classes.rightArrow} />
+                    <p className={classes.nextLink}>
+                      <span className={classes.small}>Next Project</span>
+                      <br />
+                      -
+                    </p>
+                  </div>
                 </div>
               }       
             </div>

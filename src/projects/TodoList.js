@@ -71,6 +71,8 @@ class TodoList extends React.Component {
 
           <ImageList data={imageData} />
 
+          <Divider />
+
           <Pagination
             previousTitle="Delivery Route Planner"
             previousLink="/projects/delivery-route-planner"

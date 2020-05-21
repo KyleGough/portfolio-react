@@ -68,6 +68,8 @@ class RollerCoaster extends React.Component {
 
           <ImageList data={imageData} />
 
+          <Divider />
+
           <Pagination
             previousTitle="RSCBot"
             previousLink="/projects/rscbot"

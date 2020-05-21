@@ -1,13 +1,17 @@
 const useStyles = theme => ({
   root: {
-    paddingBottom: "3em",
-    paddingTop: "3em",
-    paddingLeft: "4em",
-    paddingRight: "4em"
+    padding: "3em 4em 3em 4em",
+    [theme.breakpoints.down("sm")]: {
+      padding: "1em 2em 1em 2em",
+    },
   },
   subtitle: {
     marginTop: "1em",
     marginBottom: "1em",        
+  },
+  subsubtitle: {
+    display: "block",
+    paddingTop: "2em"
   },
   section: {
     paddingBottom: "2em",
@@ -16,11 +20,10 @@ const useStyles = theme => ({
     fontFamily: "Lato",
   },
   ul: {
-    marginLeft: "1em",
+    paddingLeft: 0,
     "& > li": {
       listStyleType: "square!important",
-      listStylePosition: "outside",
-
+      listStylePosition: "inside",
     }
   },
   link: {

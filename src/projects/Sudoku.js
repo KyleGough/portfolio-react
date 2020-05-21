@@ -17,9 +17,13 @@ const projectInfo = ProjectList["sudoku"];
 
 const imageData = [
   {
-    url: "/img/roller-coaster1.png",
-    title: "Back cart view"
+    url: "/img/sudoku1.png",
+    title: "X-Wing example"
   },
+  {
+    url: "/img/sudoku2.png",
+    title: "XYZ-Wing example"
+  }
 ];
 
 
@@ -41,7 +45,7 @@ class Sudoku extends React.Component {
 
           <div className={classes.section}>
             <Typography className={classes.subtitle} variant="h5" component="h2">Techniques</Typography>
-            <strong>Solo Candidate</strong>
+            <strong className={classes.subsubtitle}>Solo Candidate</strong>
             <p>
               The solo candidate technique is a simple technique for identifying the value of cells
               where a cell has only one candidate, therefore the cell must be that candidate. This
@@ -50,7 +54,7 @@ class Sudoku extends React.Component {
               algorithm. Using only this strategy is not sufficient enough to solve any 17-clue Sudoku.
             </p>
 
-            <strong>Hidden Candidate</strong>
+            <strong className={classes.subsubtitle}>Hidden Candidate</strong>
             <p>
               The hidden candidate technique is another simple technique for identifying the value of
               cells. If a candidate is valid in only one cell within a column, row or sector then that
@@ -61,7 +65,7 @@ class Sudoku extends React.Component {
               solve every simple Sudoku.
             </p>
 
-            <strong>Subset Cover (Pairs/Triples/Quads/Quints)</strong>
+            <strong className={classes.subsubtitle}>Subset Cover (Pairs/Triples/Quads/Quints)</strong>
             <p>
               The subset cover technique eliminates candidates within a column, row or sector. If a
               subset of N cells within a structure covers N different candidates (i.e. union of
@@ -71,7 +75,7 @@ class Sudoku extends React.Component {
               smaller subset of size (9-N) which will be simpler to solve.
             </p>
 
-            <strong>Pointing Pairs/Triples</strong>
+            <strong className={classes.subsubtitle}>Pointing Pairs/Triples</strong>
             <p>
               The pointing pairs/triples technique eliminates candidates within a column or row. If a
               candidate occurs either two or three times within a sector and these cells are all within
@@ -80,7 +84,7 @@ class Sudoku extends React.Component {
               algorithm as each cell in every sector must be checked for each candidate.
             </p>
 
-            <strong>Box/Line intersection</strong>
+            <strong className={classes.subsubtitle}>Box/Line intersection</strong>
             <p>
               The box/line intersection technique eliminates candidates within a sector. If a candidate
               value in a column/row only appears within one sector, then that candidate must occur in
@@ -89,7 +93,7 @@ class Sudoku extends React.Component {
               algorithm as each cell in a column/row must be checked for every column/row.
             </p>
 
-            <strong>X-Wing</strong>
+            <strong className={classes.subsubtitle}>X-Wing</strong>
             <p>
               The X-Wing technique is a subset of single value chaining strategies where a candidate is
               restricted in two cells along a column in two different columns that all share the same rows.
@@ -98,7 +102,7 @@ class Sudoku extends React.Component {
               complexity algorithm.
             </p>
 
-            <strong>Singles Chain</strong>
+            <strong className={classes.subsubtitle}>Singles Chain</strong>
             <p>
               The singles chain technique firstly identifies for a given candidate all the conjugate pairs.
               Then constructs a connected graph of conjugate pairs with nodes of alternating state (ON/OFF).
@@ -108,7 +112,7 @@ class Sudoku extends React.Component {
               conjugate pairs leading to an algorithmic complexity of O(N<sup>3</sup>).
             </p>
 
-            <strong>Y-Wing</strong>
+            <strong className={classes.subsubtitle}>Y-Wing</strong>
             <p>
               The Y-Wing technique is a bi-value chaining strategy that uses three bi-value cells to eliminate
               candidates. The head of the Y-Wing has candidates AB, there are two wings that share the same
@@ -117,7 +121,7 @@ class Sudoku extends React.Component {
               a candidate. This technique has been implemented using a O(N<sup>3</sup>) complexity algorithm.
             </p>
 
-            <strong>Unique Rectangles</strong>
+            <strong className={classes.subsubtitle}>Unique Rectangles</strong>
             <p>
               The Unique Rectangle technique eliminates candidates by preventing a state where there exist
               multiple solutions. A Unique Rectangle is a group of four cells that form a rectangle of which
@@ -126,27 +130,27 @@ class Sudoku extends React.Component {
               a rectangle where the A or B are interchangeable.
             </p>
 
-            <strong>Swordfish</strong>
+            <strong className={classes.subsubtitle}>Swordfish</strong>
             <p>
               The Swordfish technique is an extension of the X-Wing technique but where a candidate is
               restricted in three cells along a column in three different columns that all share the same rows.
             </p>
 
-            <strong>Jellyfish</strong>
+            <strong className={classes.subsubtitle}>Jellyfish</strong>
             <p>
               The Jellyfish technique is an extension of both the X-Wing and Swordfish techniques, but with a
               candidate restricted in four cells along a column in four different columns that all share the
               same rows.
             </p>
 
-            <strong>Bi-Value Universal Grave</strong>
+            <strong className={classes.subsubtitle}>Bi-Value Universal Grave</strong>
             <p>
               The Bi-Value Universal Grave (BUG) is a state that a Sudoku can reach where all unsolved cells
               in the Sudoku have only 2 candidates, except a single cell that has 3 candidates. The aim of this
               technique to detect the BUG state and use it to eliminate candidates. This technique has been
               implemented using a O(N<sup>2</sup>) complexity algorithm.</p>
 
-            <strong>XYZ-Wing</strong>
+            <strong className={classes.subsubtitle}>XYZ-Wing</strong>
             <p>
               The XYZ-Wing technique is an extension of the Y-Wing technique but with the head containing 3
               candidates instead of 2. The head of the XYZ-Wing has candidates XYZ, there are two wings that
@@ -155,7 +159,7 @@ class Sudoku extends React.Component {
               been implemented using a O(N<sup>3</sup>) complexity algorithm.
             </p>
 
-            <strong>WXYZ-Wing</strong>
+            <strong className={classes.subsubtitle}>WXYZ-Wing</strong>
             <p>
               The WXYZ-Wing technique is a further extension of Y-Wing and XYZ-Wing but with the head
               containing 4 candidates and three wings that share candidates with the head and have a single
@@ -167,6 +171,8 @@ class Sudoku extends React.Component {
           <Divider />
 
           <ImageList data={imageData} />
+
+          <Divider />
 
           <Pagination
             previousTitle="QuRVe"

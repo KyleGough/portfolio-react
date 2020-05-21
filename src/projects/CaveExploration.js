@@ -62,6 +62,8 @@ class CaveExploration extends React.Component {
 
           <ImageList data={imageData} />
 
+          <Divider />
+
           <Pagination
             previousTitle="Roller Coaster"
             previousLink="/projects/roller-coaster"

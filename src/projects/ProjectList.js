@@ -15,7 +15,9 @@ const ProjectList = {
     title: "LucidLab",
     subtitle: "CS407: Group Project",
     date: "October 2019 - May 2020",
-    desc: "",
+    desc: "An adaptable, heterogeneous IoT testbed for which I developed the front-end user interface. The UI allows registered users to upload and configure tests and images to be deployed on the testbed. Additionally, test results and custom metrics including mote availability graphs and mote CCA charts can be viewed.",
+    image: "/img/lucidlab1.png",
+    alt: "LucidLab",
     link: "/projects/lucidlab",
     chips: ["React", "JavaScript", "Material UI", "HTML", "CSS"]
   },
@@ -24,6 +26,8 @@ const ProjectList = {
     title: "Logical Sudoku Solver",
     date: "October 2019 - December 2019",
     desc: "CLI logical Sudoku solver that can solve expert level 9x9 Sudoku using only logical techniques and reasoning (in other words no brute forcing, guessing or backtracking). The program outputs a detailed description of the techniques and moves required at each step to solve unique solution Sudoku. The solver reads csv files where each puzzle can be separated by newline characters to allow batch solving. After processing all Sudoku in a given file, in-depth analysis is displayed including but not limited to: difficulty rating, occurrences of each technique, probability of each technique, processing time for each technique and total processing time.",
+    image: "/img/sudoku1.png",
+    alt: "Sudoku",
     link: "/projects/sudoku",
     github: "https://github.com/KyleGough/sudoku",
     chips: ["Python"]

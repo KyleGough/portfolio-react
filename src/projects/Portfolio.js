@@ -64,6 +64,8 @@ class Portfolio extends React.Component {
 
           <ImageList data={imageData} />
 
+          <Divider />
+
           <Pagination
             previousTitle="LucidLab"
             previousLink="/projects/lucidlab"

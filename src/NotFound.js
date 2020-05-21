@@ -9,10 +9,10 @@ import {Link} from 'react-router-dom';
 
 const useStyles = theme => ({
   root: {
-    paddingBottom: "3em",
-    paddingTop: "3em",
-    paddingLeft: "4em",
-    paddingRight: "4em"
+    padding: "3em 4em 3em 4em",
+    [theme.breakpoints.down("sm")]: {
+      padding: "1em 2em 1em 2em",
+    },
   },
   title: {
     fontSize: "8rem",
