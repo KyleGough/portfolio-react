@@ -124,14 +124,14 @@ class About extends React.Component {
           <p className={classes.intro}>
              Currently, I am a 4<sup>th</sup> year Computer Science MEng student at the University of Warwick.
              I enjoy learning new languages, frameworks and technologies outside of the regular
-             university ciriculum. So far I have explored: C#, Haskell, Ruby, Python, Node.js,
-             Sass, Bootstrap, Materialize, Material UI and MongoDB. I have also created some projects using
+             university ciriculum such as: C#, Ruby, Node, React, Zsh, Sass, Bootstrap, Materialize,
+             Material UI and MongoDB. I have also created some projects using
              these languages where I feel confident enough. Furthermore, I have been priviledged
              enough to have undertaken both a spring week and summer internship with Bank of America,
              and I have accepted an offer to continue working there starting from July 2020.
           </p>
           <p className={classes.centre}>For a more compact overview you can view my CV <a className={classes.link} target="_blank" rel="noopener noreferrer" href="CV.pdf">here.</a></p>  
-          <p className={classes.centre}>You can view a list of my projects <a className={classes.link} href="projects/">here.</a></p>
+          <p className={classes.centre}>You can view a list of my projects <Link className={classes.link} to="/projects">here.</Link></p>
           </div>
 
           <Divider />

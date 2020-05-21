@@ -5,7 +5,8 @@ import PropTypes from 'prop-types';
 import {withStyles} from '@material-ui/core/styles';
 import {Link} from 'react-router-dom';
 import Chip from '@material-ui/core/Chip';
-import Breadcrumbs from '@material-ui/core/Breadcrumbs';
+import IconButton from '@material-ui/core/IconButton';
+import GitHubIcon from '@material-ui/icons/GitHub';
 
 
 const useStyles = theme => ({
@@ -50,11 +51,29 @@ class ProjectIntro extends React.Component {
           <p className={classes.date}>{data.date}</p>
           <p className={classes.intro}>{data.desc}</p>
           {
+            data.github ? 
+              <a href={data.github} target="_blank" rel="noopener noreferrer">
+                <IconButton className={classes.github} color="secondary" aria-label="github">
+                  <GitHubIcon />
+                </IconButton>
+              </a>
+              : null
+          }
+          {
             data.chips.map((item) => {
               return (
                 <Chip className={classes.chip} label={item} color="primary" variant="outlined" />
               )   
             })
+          }
+          {
+            data.chipsOld ?
+              data.chipsOld.map((item) => {
+                return (
+                  <Chip className={classes.chip} label={item} disabled variant="outlined" />
+                )   
+              })
+            : null
           }
         </div>
     );

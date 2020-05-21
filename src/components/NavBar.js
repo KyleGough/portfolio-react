@@ -55,6 +55,7 @@ const useStyles = ({
     },
 });
 
+
 class NavBar extends React.Component {
     
     render() {
@@ -62,34 +63,27 @@ class NavBar extends React.Component {
         
         return (
             <AppBar className={classes.nav} position="static">
-                <Toolbar>
-                    <Typography variant="h6" className={classes.title}>
-                        <Link className={classes.titleLink} variant="inherit" to="/">{title}</Link>
-                    </Typography>
-
-                    <Link className={classes.link} variant="inherit" to="/">
-                        <Typography variant="h6" className={classes.linkTitle}>Home</Typography>
-                    </Link>
-
-                    <Link className={classes.link} variant="inherit" to="/about">
-                        <Typography variant="h6" className={classes.linkTitle}>Skills</Typography>
-                    </Link>
-                
-                    <Link className={classes.link} variant="inherit" to="/projects">
-                        <Typography variant="h6" className={classes.linkTitle}>
-                            Projects
-                        </Typography>
-                    </Link>
-                
-                    <Tooltip title="GitHub">
-                        <a className={classes.link} variant="inherit" href="http://github.com/KyleGough" target="_blank" rel="noopener noreferrer">
-                            <IconButton className={classes.iconLink} color="inherit">
-                                <GitHubIcon />
-                            </IconButton>
-                        </a>
-                    </Tooltip>
-
-                </Toolbar>
+              <Toolbar>
+                <Typography variant="h6" className={classes.title}>
+                  <Link className={classes.titleLink} variant="inherit" to="/">{title}</Link>
+                </Typography>
+                <Link className={classes.link} variant="inherit" to="/">
+                  <Typography variant="h6" className={classes.linkTitle}>Home</Typography>
+                </Link>
+                <Link className={classes.link} variant="inherit" to="/projects">
+                  <Typography variant="h6" className={classes.linkTitle}>Projects</Typography>
+                </Link>
+                <Link className={classes.link} variant="inherit" to="/about">
+                  <Typography variant="h6" className={classes.linkTitle}>Skills</Typography>
+                </Link>
+                <Tooltip title="GitHub">
+                  <a className={classes.link} variant="inherit" href="http://github.com/KyleGough" target="_blank" rel="noopener noreferrer">
+                    <IconButton className={classes.iconLink} color="inherit">
+                      <GitHubIcon />
+                    </IconButton>
+                  </a>
+                </Tooltip>
+              </Toolbar>
             </AppBar>
         );
     }

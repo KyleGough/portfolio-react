@@ -39,15 +39,6 @@ class Qurve extends React.Component {
           
           <Divider /> 
 
-          <div className={classes.section}>
-            <Typography className={classes.subtitle} variant="h5" component="h2">Features</Typography>
-            <ul className={classes.ul}>
-              <li></li>
-            </ul>
-          </div>
-
-          <Divider />
-
           <ImageList data={imageData} />
 
           <Pagination

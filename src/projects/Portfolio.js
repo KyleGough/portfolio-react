@@ -17,9 +17,21 @@ const projectInfo = ProjectList["portfolio"];
 
 const imageData = [
   {
-    url: "/img/roller-coaster1.png",
-    title: "Back cart view"
+    url: "/img/portfolio1.png",
+    title: "Project page"
   },
+  {
+    url: "/img/portfolio2.png",
+    title: "Skills page"
+  },
+  {
+    url: "/img/portfolio3.png",
+    title: "Project list page"
+  },
+  {
+    url: "/img/portfolio4.png",
+    title: "Old portfolio version"
+  }
 ];
 
 
@@ -35,14 +47,16 @@ class Portfolio extends React.Component {
 
           <Divider /> 
 
-          <ProjectImage img={imageData[0]} />
+          <ProjectImage img={imageData[2]} />
           
           <Divider /> 
 
           <div className={classes.section}>
-            <Typography className={classes.subtitle} variant="h5" component="h2">Features</Typography>
+            <Typography className={classes.subtitle} variant="h5" component="h2">Versions</Typography>
             <ul className={classes.ul}>
-              <li></li>
+              <li><strong>v1</strong> - Initial version created in late 2016 was a simple site created with HTML, Sass and Materialize.</li>
+              <li><strong>v2</strong> - The second iteration of the site was rebuilt in PHP to aid maintainability and expand functionality.</li>
+              <li><strong>Current</strong> - The current version was rebuilt again in React due to its benefits and ease of use over PHP.</li>
             </ul>
           </div>
 

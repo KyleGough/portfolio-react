@@ -5,7 +5,7 @@ import Typography from '@material-ui/core/Typography';
 import PropTypes from 'prop-types';
 import {withStyles} from '@material-ui/core/styles';
 import {Link} from 'react-router-dom';
-import LocationDisabledIcon from '@material-ui/icons/LocationDisabled';
+
 
 const useStyles = theme => ({
   root: {

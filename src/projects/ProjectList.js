@@ -3,11 +3,12 @@ const ProjectList = {
   "portfolio": {
     title: "Portfolio",
     date: "December 2016 - May 2020",
-    desc: "",
-    image: "/img/portfolio1.png",
-    alt: "Old portfolio version",
+    desc: "My personal portfolio website created to showcase my projects and skills. First created in 2016 as a simple static HTML and CSS website, the site has experienced multiple revisions using newly learnt technologies such as: PHP, Bootstrap, Materialize and jQuery. The site has recently been rebuilt and updated with React and Material UI to replace its PHP predecessor.",
+    image: "/img/portfolio3.png",
+    alt: "Portfolio project page",
     link: "/projects/portfolio",
-    chips: ["React", "JavaScript", "Material UI", "HTML", "CSS", "Node", "Sass", "Less", "Bootstrap", "Materialize"]
+    chips: ["React", "JavaScript", "Material UI", "HTML", "CSS", "Node"],
+    chipsOld: ["PHP", "Sass", "Bootstrap", "Materialize"]
   },
 
   "lucidlab": {
