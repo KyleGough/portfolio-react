@@ -104,7 +104,7 @@ class Footer extends React.Component {
                         <Grid className={classes.grid} item xs={6} lg={4}>
                                 <h5 className={classes.footerTitle}>Website</h5>
                                 <ul className={classes.linkList}>
-                                    <li><a className={classes.link} target="_blank" rel="noopener noreferrer" href="CV.pdf">CV</a></li>
+                                    <li><a className={classes.link} target="_blank" rel="noopener noreferrer" href="/CV.pdf">CV</a></li>
                                     <li><Link className={classes.link} variant="inherit" to="/about">Skills</Link></li>
                                     <li><Link className={classes.link} variant="inherit" to="/projects">Projects</Link></li>
                                     <li><Link className={classes.link} variant="inherit" to="/privacy">Privacy</Link></li>
