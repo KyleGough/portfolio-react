@@ -5,6 +5,10 @@ const useStyles = theme => ({
       padding: "1em 2em 1em 2em",
     },
   },
+  title: {
+    marginTop: "1em",
+    marginBottom: "1em",      
+  },
   subtitle: {
     marginTop: "1em",
     marginBottom: "1em",        
@@ -17,7 +21,7 @@ const useStyles = theme => ({
     paddingBottom: "2em",
     paddingTop: "2em",
     fontSize: "15px",
-    fontFamily: "Lato",
+    fontFamily: theme.font.primary
   },
   ul: {
     paddingLeft: 0,
@@ -27,13 +31,13 @@ const useStyles = theme => ({
     }
   },
   link: {
-    color: "#03B0EE",
+    color: theme.palette.link,
     transitionDelay: "0.1s",
     transitionDuration: "0.2s",
     transitionProperty: "all",
     transitionTimingFunction: "ease",
     "&:hover": {
-      color: "#4CAF50"
+      color: theme.palette.linkHover
     },
     whiteSpace: "nowrap",
   },

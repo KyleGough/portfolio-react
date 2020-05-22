@@ -4,7 +4,7 @@ import {withStyles} from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
 
 
-const useStyles = ({
+const useStyles = theme => ({
     root: {
         marginTop: "2.5em",
         marginBottom: "2.5em"
@@ -13,7 +13,7 @@ const useStyles = ({
         width: "100%",
         display: "block",
         height: "auto",
-        boxShadow: "rgba(0, 0, 0, 0.14) 0px 2px 2px 0px, rgba(0, 0, 0, 0.12) 0px 1px 5px 0px, rgba(0, 0, 0, 0.2) 0px 3px 1px -2px"
+        boxShadow: theme.decoration.imageShadow
     },
 });
 
@@ -25,7 +25,7 @@ class ProjectImage extends React.Component {
         
         return (
             <Grid className={classes.root} container spacing={1} alignItems="center" justify="center">
-              <Grid container item xs={12} lg={8}>
+              <Grid container item xs={12} lg={10}>
                 <img className={classes.image} src={img.url} alt={img.title} />
               </Grid>
             </Grid>

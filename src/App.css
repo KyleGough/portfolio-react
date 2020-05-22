@@ -1,7 +1,9 @@
+/* Sets default font size. */
 html {
   font-size: 15px;
 }
 
+/* Removes browser default margin and sets font. */
 body {
   margin: 0;
   font-family: 'Lato', sans-serif!important;
@@ -9,10 +11,22 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+/* Removes hyperlink underlines. */
 a {
   text-decoration: none;
 }
 
+/* Headers. */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Merriweather', sans-serif;
+}
+
+/* Code block. */
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+}
+
+/* Removes styling on inputs. */
 input,
 input:focus,
 input:active,
@@ -21,6 +35,7 @@ input:hover {
   box-shadow: none!important;
 }
 
+/* Progress bar wrapper. */
 .progress {
   width: 100%;
   margin-left: 5px;
@@ -30,6 +45,7 @@ input:hover {
   background-color: inherit;
 }
 
+/* Progress bar. */
 .progressBar {
   float: left;
   height: 100%;
@@ -40,56 +56,34 @@ input:hover {
   color: white;
 }
 
+/* Responsive progress borders. */
 @media only screen and (max-width: 1200px) {
-  .progressBar {
-    border-right-width:4px
-  }
+  .progressBar { border-right-width: 4px; }
 }
-
 @media only screen and (max-width: 992px) {
-  .progressBar {
-    border-right-width:2px
-  }
+  .progressBar { border-right-width: 2px; }
 }
-
 @media only screen and (max-width: 600px) {
-  .progressBar {
-    border-right-width:1px
-  }
+  .progressBar { border-right-width: 1px; }
 }
 
-.progressProgramming {
-  background-color: #fac6c5 !important
-}
+/* Programming progress theme. */
+.progressProgramming { background-color: #fac6c5!important; }
+.progressProgramming > .progressBar { background-color: #EF5350; }
 
-.progressProgramming > .progressBar {
-  background-color: #EF5350
-}
+/* Web progress theme. */
+.progressWeb { background-color: #bbdffb!important; }
+.progressWeb > .progressBar { background-color: #42A5F5; }
 
-.progressWeb {
-  background-color: #bbdffb !important
-}
+/* Database progress theme. */
+.progressDatabase { background-color: #ffd980!important; }
+.progressDatabase > .progressBar { background-color: #FFB300; }
 
-.progressWeb > .progressBar {
-  background-color: #42A5F5
-}
+/* Other progress theme. */
+.progressOther { background-color: #a8bac3!important; }
+.progressOther > .progressBar { background-color: #607D8B; }
 
-.progressDatabase {
-  background-color: #ffd980 !important
-}
-
-.progressDatabase > .progressBar {
-  background-color: #FFB300
-}
-
-.progressOther {
-  background-color: #a8bac3 !important
-}
-
-.progressOther > .progressBar {
-  background-color: #607D8B
-}
-
+/* Carousel text covers whole image. */
 .carousel .slide .legend {
   font-family: "Merriweather"!important;
   opacity: 0.5!important;
@@ -105,6 +99,7 @@ input:hover {
   vertical-align: middle!important;
 }
 
+/* Centers navigation dots. */
 .control-dots {
   padding-left: 0!important;
 }

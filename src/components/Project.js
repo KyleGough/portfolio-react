@@ -10,25 +10,16 @@ import Skeleton from '@material-ui/lab/Skeleton';
 import {Link} from 'react-router-dom';
 
 
-const useStyles = ({
+const useStyles = theme => ({
     root: {
         marginBottom: "2em",
         marginTop: "2em",
     },
-    title: {
-        //marginTop: "1em",
-        //marginBottom: "1em",      
-      },
     desc: {
         fontSize: "1rem",
     },
-    language: {
-        fontFamily: "Lato",
-        fontSize: "15px",
-        fontWeight: 700,
-    },
     date: {
-        color: "#4CAF50",
+        color: theme.palette.textSecondary
     },
     columnBlock: {
         display: "block",
@@ -37,22 +28,9 @@ const useStyles = ({
         width: "100%",
         display: "block",
         height: "auto",
-        boxShadow: "rgba(0, 0, 0, 0.14) 0px 2px 2px 0px, rgba(0, 0, 0, 0.12) 0px 1px 5px 0px, rgba(0, 0, 0, 0.2) 0px 3px 1px -2px"
+        boxShadow: theme.decoration.imageShadow
     },
-    viewButton: {
-        marginTop: "1em",
-        background: "linear-gradient(149deg, rgba(238,78,45,1) 0%, rgba(231,133,8,1) 60%, rgba(233,118,14,1) 100%)", 
-        borderRadius: 3,
-        border: 0,
-        color: "white",
-        height: 48,
-        padding: "0 30px",
-        boxShadow: "0 3px 5px 2px rgba(255, 105, 135, .3)",
-        textTransform: "none",
-        fontFamily: "Lato",
-        fontSize: "1rem",
-        fontWeight: 375,
-    },
+    viewButton: theme.linkButton,
     github: {
         marginTop: "0.85em",
         marginLeft: "1em",

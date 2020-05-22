@@ -7,57 +7,22 @@ import {withStyles} from '@material-ui/core/styles';
 import {Link} from 'react-router-dom';
 import Skill from './components/Skill';
 import Divider from '@material-ui/core/Divider';
-import ArrowRightAltIcon from '@material-ui/icons/ArrowRightAlt';
+import useStyles from './Styles';
 
-const useStyles = theme => ({
-  root: {
-    padding: "3em 4em 3em 4em",
-    [theme.breakpoints.down("sm")]: {
-      padding: "1em 2em 1em 2em",
-    },
-  },
-  title: {
-    marginTop: "1em",
-    marginBottom: "1em",      
-  },
-  subtitle: {
-    marginTop: "1em",
-    marginBottom: "1em",        
-  },
-  section: {
-    paddingBottom: "2em",
-    paddingTop: "2em",
-    fontSize: "15px",
-    fontFamily: "Lato",
-  },
+
+const pageStyles = theme => ({
   listItem: {
     fontSize: "14px",
-    fontFamily: "Lato",
+    fontFamily: theme.palette.primary,
     marginBottom: "3em",
     paddingLeft: 0,
     listStylePosition: "inside"
-  },
-  link: {
-    color: "#03B0EE",
-    transitionDelay: "0.1s",
-    transitionDuration: "0.2s",
-    transitionProperty: "all",
-    transitionTimingFunction: "ease",
-    "&:hover": {
-      color: "#4CAF50"
-    },
-    whiteSpace: "nowrap",
   },
   intro: {
     marginBottom: "3em"
   },
   centre: {
     textAlign: "center"
-  },
-  arrow: {
-    fontSize: "0.7rem",
-    marginLeft: "0.5em",
-    marginRight: "0.5em"
   }
 });
 
@@ -145,7 +110,7 @@ class About extends React.Component {
               return (
                 <Skill
                   key={skill[0]}
-                  theme="progressProgramming"
+                  colour="progressProgramming"
                   language={skill[0]}
                   percentage={skill[1]}
                   desc={skill[2]}
@@ -165,7 +130,7 @@ class About extends React.Component {
               return (
                 <Skill
                   key={skill[0]}
-                  theme="progressWeb"
+                  colour="progressWeb"
                   language={skill[0]}
                   percentage={skill[1]}
                   desc={skill[2]}
@@ -183,7 +148,7 @@ class About extends React.Component {
               return (
                 <Skill
                   key={skill[0]}
-                  theme="progressWeb"
+                  colour="progressWeb"
                   language={skill[0]}
                   percentage={skill[1]}
                   desc={skill[2]}
@@ -203,7 +168,7 @@ class About extends React.Component {
               return (
                 <Skill
                   key={skill[0]}
-                  theme="progressDatabase"
+                  colour="progressDatabase"
                   language={skill[0]}
                   percentage={skill[1]}
                   desc={skill[2]}
@@ -223,7 +188,7 @@ class About extends React.Component {
               return (
                 <Skill
                   key={skill[0]}
-                  theme="progressOther"
+                  colour="progressOther"
                   language={skill[0]}
                   percentage={skill[1]}
                   desc={skill[2]}
@@ -248,9 +213,7 @@ class About extends React.Component {
               <li>CS132: Computer Organisation and Architecture</li>
               <li>CS133: Professional Skills</li>
               <li>
-                CS139: Web Development Technologies
-                <ArrowRightAltIcon className={classes.arrow} />
-                <Link className={classes.link} to="/projects/todo-list">
+                CS139: Web Development Technologies - <Link className={classes.link} to="/projects/todo-list">
                   To Do List
                 </Link>
                 , <Link className={classes.link} to="/projects/bsplit">
@@ -269,9 +232,7 @@ class About extends React.Component {
               <li>CS260: Algorithms</li>
               <li>CS261: Software Engineering</li>
               <li>
-                CS262: Logic and Verification
-                <ArrowRightAltIcon className={classes.arrow} />
-                <Link className={classes.link} to="/projects/rscbot">
+                CS262: Logic and Verification - <Link className={classes.link} to="/projects/rscbot">
                   RSCBot
                 </Link>
                 </li>
@@ -281,17 +242,13 @@ class About extends React.Component {
             <Typography className={classes.subtitle} variant="h6" component="h3">Year 3 Modules</Typography>
             <ul className={classes.listItem}>
               <li>
-                CS310: Computer Science Project (Dissertation) 
-                <ArrowRightAltIcon className={classes.arrow} />
-                <Link className={classes.link} to="/projects/cave-exploration">
+                CS310: Computer Science Project (Dissertation) - <Link className={classes.link} to="/projects/cave-exploration">
                   Using Swarm AI to Map a Cave Network
                 </Link>
               </li>
               <li>CS313: Mobile Robotics</li>
               <li>
-                CS324: Computer Graphics
-                <ArrowRightAltIcon className={classes.arrow} />
-                <Link className={classes.link} to="/projects/roller-coaster">
+                CS324: Computer Graphics - <Link className={classes.link} to="/projects/roller-coaster">
                   Roller Coaster
                 </Link>
               </li>
@@ -305,9 +262,7 @@ class About extends React.Component {
             <ul className={classes.listItem}>
               <li>CS402: High Peformance Computing</li>
               <li>
-                CS407: Group Project
-                <ArrowRightAltIcon className={classes.arrow} />
-                <Link className={classes.link} to="/projects/lucidlab">
+                CS407: Group Project - <Link className={classes.link} to="/projects/lucidlab">
                   LucidLab
                 </Link>
               </li>
@@ -329,4 +284,4 @@ About.propTypes = {
     classes: PropTypes.object.isRequired
 };  
 
-export default withStyles(useStyles)(About);
+export default withStyles(pageStyles)(withStyles(useStyles)(About));

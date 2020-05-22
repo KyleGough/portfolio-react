@@ -18,62 +18,55 @@ import EmojiEventsIcon from '@material-ui/icons/EmojiEvents';
 import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
 import ListItemIcon from '@material-ui/core/ListItemIcon';
-import ListItemText from '@material-ui/core/ListItemText';
 
 
-const useStyles = ({
+const useStyles = theme => ({
     title: {
-        color: "#FFFFFF",
+        color: theme.palette.navText,
         outline: "0px",
-        fontFamily: "Lato",
+        fontFamily: theme.font.primary,
         fontWeight: 300,
         flexGrow: 1
     },
     nav: {
-        backgroundColor: "#424242",
+        backgroundColor: theme.palette.navBackground
     },
     link: {
-        color: "#FFFFFF",
+        color: theme.palette.navText,
         outline: "0px",
-        fontFamily: "Lato",
+        fontFamily: theme.font.primary,
         transition: "border-bottom 0.2s ease-out 0.05s",
         borderBottom: "2px solid transparent",
         height: "64px",
         lineHeight: "64px",
         textAlign: "center",
         "&:hover": {
-            borderBottom: "2px solid #FFFFFF"
+            borderBottom: "2px solid " + theme.palette.navText,
         }
     },
     drawerLink: {
-      color: "#03B0EE",
+      color: theme.palette.link,
       transitionDelay: "0.1s",
       transitionDuration: "0.2s",
       transitionProperty: "all",
       transitionTimingFunction: "ease",
       "&:hover": {
-        color: "#4CAF50"
+        color: theme.palette.linkHover
       },
       whiteSpace: "nowrap",
     },
     linkTitle: {
         marginLeft: "1.2em",
         marginRight: "1.2em",
-        fontFamily: "Lato",
+        fontFamily: theme.font.primary,
         fontSize: "15px",
         display: "inline-block",
         verticalAlign: "middle",
         lineHeight: "normal",
     },
     iconLink: {
-        /*"&:focus": {
-            backgroundColor: "#5BB183",
-            outline: "0px",
-        },*/
-        color: "#FFFFFF",
-        outline: "0px",
-        "&:focus": { color: "#A8A8A8" },
-        "&:hover": { color: "#A8A8A8" },
+        color: theme.palette.navText,
+        outline: "0px"
     },
 });
 

@@ -11,19 +11,19 @@ const useStyles = theme => ({
         paddingBottom: "4em",
         paddingTop: "2em",
         fontSize: "15px",
-        fontFamily: "Lato",
+        fontFamily: theme.font.primary,
         [theme.breakpoints.down("sm")]: {
           paddingBottom: "1em"
         }
     },
     link: {
-        color: "#03B0EE",
+        color: theme.palette.link,
         transitionDelay: "0.1s",
         transitionDuration: "0.2s",
         transitionProperty: "all",
         transitionTimingFunction: "ease",
         "&:hover": {
-          color: "#4CAF50"
+          color: theme.palette.linkHover
         },
         whiteSpace: "nowrap",
         [theme.breakpoints.down("sm")]: {
@@ -31,7 +31,7 @@ const useStyles = theme => ({
         }
     },
     deadLink: {
-        color: "rgba(0, 0, 0, 0.40)",
+        color: theme.palette.deadLink,
         [theme.breakpoints.down("sm")]: {
           display: "inline-block"
         }

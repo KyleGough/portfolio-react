@@ -1,7 +1,6 @@
 import React from 'react';
 import './App.css';
 import Container from '@material-ui/core/Container';
-import Typography from '@material-ui/core/Typography';
 import PropTypes from 'prop-types';
 import {withStyles} from '@material-ui/core/styles';
 import Button from '@material-ui/core/Button';
@@ -10,44 +9,14 @@ import Divider from '@material-ui/core/Divider';
 import Grid from '@material-ui/core/Grid';
 import { Carousel } from 'react-responsive-carousel';
 import "react-responsive-carousel/lib/styles/carousel.min.css"; 
+import useStyles from './Styles';
 
 
-const useStyles = theme => ({
-  root: {
-    padding: "3em 4em 3em 4em",
-    [theme.breakpoints.down("sm")]: {
-      padding: "1em 2em 1em 2em",
-    },
-  },
-  title: {
-    marginTop: "1em",
-    marginBottom: "1em",      
-  },
-  subtitle: {
-    marginTop: "1em",
-    marginBottom: "1em",        
-  },
-  section: {
-    paddingBottom: "2em",
-    paddingTop: "2em",
-    fontSize: "15px",
-    fontFamily: "Lato",
-  },
+const pageStyles = theme => ({
   listitem: {
     fontSize: "14px",
-    fontFamily: "Lato",
+    fontFamily: theme.font.primary,
     marginBottom: "3em"
-  },
-  link: {
-    color: "#03B0EE",
-    transitionDelay: "0.1s",
-    transitionDuration: "0.2s",
-    transitionProperty: "all",
-    transitionTimingFunction: "ease",
-    "&:hover": {
-      color: "#4CAF50"
-    },
-    whiteSpace: "nowrap",
   },
   intro: {
     marginBottom: "3em"
@@ -58,20 +27,7 @@ const useStyles = theme => ({
   imgShowcase: {
     paddingBottom: "3em",
   },
-  linkButton: {
-    marginTop: "1em",
-    background: "linear-gradient(149deg, rgba(238,78,45,1) 0%, rgba(231,133,8,1) 60%, rgba(233,118,14,1) 100%)", 
-    borderRadius: 3,
-    border: 0,
-    color: "white",
-    height: 48,
-    padding: "0 30px",
-    boxShadow: "0 3px 5px 2px rgba(255, 105, 135, .3)",
-    textTransform: "none",
-    fontFamily: "Lato",
-    fontSize: "1rem",
-    fontWeight: 375,
-  },
+  linkButton: theme.linkButton,
   gridLink: {
     textAlign: "center",
     "& > *": {
@@ -79,7 +35,8 @@ const useStyles = theme => ({
     }
   },
   linkDesc: {
-    fontFamily: "Merriweather",
+    fontFamily: theme.font.primary,
+    fontWeight: 200,
     marginTop: "1.25em"
   }
 });
@@ -119,10 +76,12 @@ class HomePage extends React.Component {
             showStatus={false}
             showThumbs={false}
             showArrows={false}
+            transitionTime={750}
+            interval={5000}
           >            
             {
               imageShowcase.map((image) => (
-                <React.Fragment>
+                <React.Fragment key={image.title}>
                   <img src={image.src} alt={image.title} />
                   <p className="legend">{image.title}</p>
                 </React.Fragment>
@@ -157,11 +116,6 @@ class HomePage extends React.Component {
           </Grid>  
         </div>
 
-        https
-        <br />
-        sudoku images
-        <br />
-        hosting
       </Container>
     );
   }
@@ -172,4 +126,4 @@ HomePage.propTypes = {
     classes: PropTypes.object.isRequired
 };  
 
-export default withStyles(useStyles)(HomePage);
+export default withStyles(pageStyles)(withStyles(useStyles)(HomePage));

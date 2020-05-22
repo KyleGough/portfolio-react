@@ -9,7 +9,7 @@ import ProjectImage from '../components/ProjectImage';
 import ImageList from '../components/ImageList';
 import Pagination from '../components/Pagination';
 import Divider from '@material-ui/core/Divider';
-import useStyles from './Styles';
+import useStyles from '../Styles';
 import ProjectList from './ProjectList';
 
 

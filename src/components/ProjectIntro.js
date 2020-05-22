@@ -3,7 +3,6 @@ import '../App.css';
 import Typography from '@material-ui/core/Typography';
 import PropTypes from 'prop-types';
 import {withStyles} from '@material-ui/core/styles';
-import {Link} from 'react-router-dom';
 import Chip from '@material-ui/core/Chip';
 import IconButton from '@material-ui/core/IconButton';
 import GitHubIcon from '@material-ui/icons/GitHub';
@@ -21,7 +20,7 @@ const useStyles = theme => ({
     paddingBottom: "2em",
     paddingTop: "2em",
     fontSize: "15px",
-    fontFamily: "Lato",
+    fontFamily: theme.font.primary
   },
   intro: {
     marginBottom: "2em"
@@ -30,10 +29,10 @@ const useStyles = theme => ({
     textAlign: "center"
   },
   date: {
-    color: "#4CAF50",
+    color: theme.palette.textSecondary,
   },
   chip: {
-    fontFamily: "Lato",
+    fontFamily: theme.font.primary,
     margin: "4px"
   }
 });

@@ -7,52 +7,7 @@ import {withStyles} from '@material-ui/core/styles';
 import Divider from '@material-ui/core/Divider';
 import Project from './components/Project';
 import ProjectList from './projects/ProjectList';
-
-
-const useStyles = theme => ({
-  root: {
-    padding: "3em 4em 3em 4em",
-    [theme.breakpoints.down("sm")]: {
-      padding: "1em 2em 1em 2em",
-    },
-  },
-  title: {
-    marginTop: "1em",
-    marginBottom: "1em",      
-  },
-  subtitle: {
-    marginTop: "1em",
-    marginBottom: "1em",        
-  },
-  section: {
-    paddingBottom: "2em",
-    paddingTop: "2em",
-    fontSize: "15px",
-    fontFamily: "Lato",
-  },
-  listitem: {
-    fontSize: "14px",
-    fontFamily: "Lato",
-    marginBottom: "2em"
-  },
-  link: {
-    color: "#03B0EE",
-    transitionDelay: "0.1s",
-    transitionDuration: "0.2s",
-    transitionProperty: "all",
-    transitionTimingFunction: "ease",
-    "&:hover": {
-      color: "#4CAF50"
-    },
-    whiteSpace: "nowrap",
-  },
-  intro: {
-    marginBottom: "3em"
-  },
-  centre: {
-    textAlign: "center"
-  }
-});
+import useStyles from './Styles';
 
 
 class Projects extends React.Component {
@@ -65,9 +20,6 @@ class Projects extends React.Component {
           
           <div className={classes.section}>
           <Typography className={classes.title} variant="h3" component="h1">Projects</Typography>
-          <p className={classes.intro}>
-             
-          </p>
           </div>
 
           <Divider />

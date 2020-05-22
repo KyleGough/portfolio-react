@@ -6,33 +6,34 @@ import GridListTile from '@material-ui/core/GridListTile';
 import GridListTileBar from '@material-ui/core/GridListTileBar';
 import Typography from '@material-ui/core/Typography';
 
-const useStyles = ({
+
+const useStyles = theme => ({
     section: {
         paddingBottom: "2em",
         paddingTop: "2em",
         fontSize: "15px",
-        fontFamily: "Lato",
+        fontFamily: theme.font.primary,
     },
     subtitle: {
         marginTop: "1em",
         marginBottom: "1em",        
     },
     list: {
-        display: 'flex',
-        flexWrap: 'wrap',
-        justifyContent: 'space-around',
-        overflow: 'hidden',
+        display: "flex",
+        flexWrap: "wrap",
+        justifyContent: "space-around",
+        overflow: "hidden",
     },
     gridList: {
-        flexWrap: 'nowrap',
-        transform: 'translateZ(0)',
+        flexWrap: "nowrap",
+        transform: "translateZ(0)",
     },
     title: {
-        fontFamily: "Lato",
+        fontFamily: theme.font.primary,
         fontWeight: 300,
     },
     titleBar: {
-        background: 'linear-gradient(to top, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.3) 70%, rgba(0,0,0,0) 100%)',
+        background: "linear-gradient(to top, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.3) 70%, rgba(0,0,0,0) 100%)",
     },
 });
 

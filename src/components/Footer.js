@@ -9,47 +9,51 @@ import IconButton from '@material-ui/core/IconButton';
 import GitHubIcon from '@material-ui/icons/GitHub';
 import EmailIcon from '@material-ui/icons/Email';
 
+
 const useStyles = theme => ({
     root: {
         top: "auto",
         bottom: 0,
         fontSize: "15px",
-        fontFamily: "Lato",
-        backgroundColor: "#424242",
+        fontFamily: theme.font.primary,
+        backgroundColor: theme.palette.navBackground,
+        color: theme.palette.footerText,
         textAlign: "center"
     },
     copyright: {
-        backgroundColor: "#353535",
+        backgroundColor: theme.palette.copyrightBackground,
         verticalAlign: "middle",
         paddingTop: "0.75em",
         paddingBottom: "0.75em",
-        color: "rgba(255,255,255,0.8)",
+        color: theme.palette.copyrightText,
         fontWeight: 300
     },
     links: {
-        backgroundColor: "#424242",
+        backgroundColor: theme.palette.navBackground,
         verticalAlign: "middle",
-        color: "rgba(255,255,255,0.8)",
         paddingBottom: "3em",
         paddingTop: "3em",
     },
     footerTitle: {
         fontWeight: "normal",
-        color: "#FFFFFF",
-        fontFamily: "Merriweather",
+        fontFamily: theme.font.secondary,
         fontSize: "1.2rem"
     },
     iconLink: {
-        color: "#EEEEEE",
+        color: theme.palette.footerLink,
         outline: "0px",
-        "&:focus": { color: "#A8A8A8" },
-        "&:hover": { color: "#A8A8A8" },
+        "&:focus": { color: theme.palette.footerLinkHover },
+        "&:hover": { color: theme.palette.footerLinkHover },
     },
     link: {
-        color: "#EEEEEE",
+        color: theme.palette.footerLink,
         outline: "0px",
-        "&:focus": { color: "#A8A8A8" },
-        "&:hover": { color: "#A8A8A8" },
+        "&:focus": { color: theme.palette.footerLinkHover },
+        "&:hover": { color: theme.palette.footerLinkHover },
+        transitionDelay: "0.1s",
+        transitionDuration: "0.2s",
+        transitionProperty: "all",
+        transitionTimingFunction: "ease",
     },
     grid: {
         marginBottom: "1em",
@@ -59,7 +63,9 @@ const useStyles = theme => ({
     email: {
         fontSize: 19,
         lineHeight: 19,
-        verticalAlign: "bottom"
+        verticalAlign: "bottom",
+        marginRight: "5px",
+        marginBottom: "1px"
     },
     linkList: {
         textAlign: "center",
@@ -81,7 +87,7 @@ class Footer extends React.Component {
                         <Container maxWidth="sm">
                             <h5 className={classes.footerTitle}>About Me</h5>
                             <p>4<sup>th</sup> Year Computer Science MEng Student at Warwick University. Programmer and Web Developer with interests in Bouldering, Cycling, Guitar, Movies and Physics.</p>
-                            <EmailIcon className={classes.email}/><span>  kylegough@gmail.com</span>
+                            <EmailIcon className={classes.email}/><span>  <a className={classes.link} href="mailto:kylegough@gmail.com">kylegough@gmail.com</a></span>
                         </Container>
                         </Grid>
                         <Grid className={classes.grid} item xs={6} lg={4}>

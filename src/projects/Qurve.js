@@ -6,18 +6,11 @@ import {withStyles} from '@material-ui/core/styles';
 import ProjectIntro from '../components/ProjectIntro';
 import Pagination from '../components/Pagination';
 import Divider from '@material-ui/core/Divider';
-import useStyles from './Styles';
+import useStyles from '../Styles';
 import ProjectList from './ProjectList';
 
 
 const projectInfo = ProjectList["qurve"];
-
-const imageData = [
-  {
-    url: "/img/roller-coaster1.png",
-    title: "Back cart view"
-  },
-];
 
 
 class Qurve extends React.Component {
@@ -31,14 +24,6 @@ class Qurve extends React.Component {
           <ProjectIntro data={projectInfo} />
 
           <Divider /> 
-
-          {/*
-          <ProjectImage img={imageData[0]} />
-          
-          <Divider /> 
-
-          <ImageList data={imageData} />
-          */}
 
           <Pagination
             previousTitle="Cave Exploration"
