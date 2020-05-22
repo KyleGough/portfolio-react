@@ -7,6 +7,7 @@ const ProjectList = {
     image: "/img/portfolio3.png",
     alt: "Portfolio project page",
     link: "/projects/portfolio",
+    github: "https://github.com/KyleGough/portfolio-react",
     chips: ["React", "JavaScript", "Material UI", "HTML", "CSS", "Node"],
     chipsOld: ["PHP", "Sass", "Bootstrap", "Materialize"]
   },
