@@ -118,7 +118,7 @@ class App extends React.Component {
                 <Route path="/projects/sorting-algorithm-visualiser" component={SortingVisualiser} />
                 <Route path="/projects" component={ProjectsPage} />
                 <Route path="/404" component={NotFound} />
-                <Route component={NotFound} />
+                <Route path="*" component={NotFound} />
               </Switch>
             </main>
             <Footer />
