@@ -63,6 +63,10 @@ const imageShowcase = [
 
 class HomePage extends React.Component {
 
+  componentDidMount(){
+    document.title = "Kyle Gough - Portfolio";
+  }
+
   render() {
     const { classes } = this.props;
 

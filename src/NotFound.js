@@ -21,6 +21,10 @@ const pageStyles = theme => ({
 
 class NotFound extends React.Component {
 
+  componentDidMount(){
+    document.title = "404 Page Not Found";
+  }
+
   render() {
     const { classes } = this.props;
 

@@ -40,6 +40,10 @@ const useStyles = theme => ({
 
 class ProjectIntro extends React.Component {
 
+  componentDidMount(){
+    document.title = this.props.data.title;
+  }
+
   render() {
     const { classes, data } = this.props;
 

@@ -19,6 +19,10 @@ const pageStyles = theme => ({
 
 class Privacy extends React.Component {
 
+  componentDidMount(){
+    document.title = "Privacy Policy";
+  }
+
   render() {
     const { classes } = this.props;
 

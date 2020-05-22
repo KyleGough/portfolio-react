@@ -12,6 +12,10 @@ import useStyles from './Styles';
 
 class Projects extends React.Component {
 
+  componentDidMount(){
+    document.title = "Project List";
+  }
+
   render() {
     const { classes } = this.props;
 

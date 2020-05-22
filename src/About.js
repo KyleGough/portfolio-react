@@ -80,6 +80,10 @@ const skillsOther = [
 
 class About extends React.Component {
 
+  componentDidMount(){
+    document.title = "About Me";
+  }
+
   render() {
     const { classes } = this.props;
 
