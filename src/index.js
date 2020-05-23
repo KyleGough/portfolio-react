@@ -86,6 +86,7 @@ const theme = responsiveFontSizes(createMuiTheme({
   },
 }));
 
+//TODO "react-scripts start"
 
 class App extends React.Component {
   
