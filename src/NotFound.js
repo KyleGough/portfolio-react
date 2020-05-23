@@ -22,7 +22,7 @@ const pageStyles = theme => ({
 class NotFound extends React.Component {
 
   componentDidMount(){
-    document.title = "404 Page Not Found";
+    document.title = "Page Not Found";
   }
 
   render() {
