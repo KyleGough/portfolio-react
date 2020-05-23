@@ -87,6 +87,7 @@ const theme = responsiveFontSizes(createMuiTheme({
 }));
 
 //TODO "react-scripts start"
+//https://github.com/mars/create-react-app-buildpack.git#v6.0.0
 
 class App extends React.Component {
   
