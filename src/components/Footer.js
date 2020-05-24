@@ -87,7 +87,7 @@ class Footer extends React.Component {
                         <Container maxWidth="sm">
                             <h5 className={classes.footerTitle}>About Me</h5>
                             <p>4<sup>th</sup> Year Computer Science MEng Student at Warwick University. Programmer and Web Developer with interests in Bouldering, Cycling, Guitar, Movies and Physics.</p>
-                            <EmailIcon className={classes.email}/><span>  <a className={classes.link} href="mailto:kylegough@gmail.com">kylegough@gmail.com</a></span>
+                            <EmailIcon className={classes.email}/><span>  <a className={classes.link} href="mailto:kylegough98@gmail.com">kylegough@gmail.com</a></span>
                         </Container>
                         </Grid>
                         <Grid className={classes.grid} item xs={6} lg={4}>
@@ -96,7 +96,7 @@ class Footer extends React.Component {
                                 <li><Link className={classes.link} variant="inherit" to="/projects">All Projects</Link></li>
                                 <li><Link className={classes.link} variant="inherit" to="/projects/sudoku">Logical Sudoku Solver</Link></li>
                                 <li><Link className={classes.link} variant="inherit" to="/projects/cave-exploration">Cave Exploration</Link></li>
-                                <li><Link className={classes.link} variant="inherit" to="/projects/sorting-algorithm-visualiser">Sorting Visualiser</Link></li>
+                                <li><Link className={classes.link} variant="inherit" to="/projects/sorting-algorithm-visualiser">Sorting Algorithm Visualiser</Link></li>
                                 <li><Link className={classes.link} variant="inherit" to="/projects/graph-algorithm-visualiser">Graph Algorithm Visualiser</Link></li>
                                 <li><Link className={classes.link} variant="inherit" to="/projects/bsplit">BSplit</Link></li>
                             </ul>
@@ -108,7 +108,7 @@ class Footer extends React.Component {
                                     <li><Link className={classes.link} variant="inherit" to="/about">Skills</Link></li>
                                     <li><Link className={classes.link} variant="inherit" to="/projects">Projects</Link></li>
                                     <li><Link className={classes.link} variant="inherit" to="/privacy">Privacy</Link></li>
-                                    <li><a className={classes.link} href="http://github.com/KyleGough" target="_blank" rel="noopener noreferrer">
+                                    <li><a className={classes.link} href="https://github.com/KyleGough" target="_blank" rel="noopener noreferrer">
                                         <IconButton className={classes.iconLink} color="inherit">
                                             <GitHubIcon />
                                         </IconButton>
@@ -118,7 +118,7 @@ class Footer extends React.Component {
                     </Grid>
                 </Container>
                 <Container className={classes.copyright} maxWidth={false}>
-                    <p>© 2018 - 2020 Kyle Gough</p>
+                    <p>© Kyle Gough, 2020</p>
                 </Container>
             </footer>
         );

@@ -20,7 +20,8 @@ const ProjectList = {
     image: "/img/lucidlab1.png",
     alt: "LucidLab",
     link: "/projects/lucidlab",
-    chips: ["React", "JavaScript", "Material UI", "HTML", "CSS"]
+    chips: ["React", "JavaScript", "Material UI", "HTML", "CSS"],
+    chipsOther: ["Python", "Shell", "C", "SQL"]
   },
 
   "sudoku": {
@@ -74,7 +75,8 @@ const ProjectList = {
     image: "/img/rscbot1.png",
     alt: "RSCBot",
     link: "/projects/rscbot",
-    chips: ["JavaScript", "PHP", "SQL", "jQuery", "HTML", "CSS", "Materialize"]
+    chips: ["JavaScript", "jQuery", "HTML", "CSS", "Materialize"],
+    chipsOther: ["PHP", "SQL"]
   },
 
   "url-shortener": {

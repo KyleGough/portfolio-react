@@ -56,14 +56,18 @@ class Portfolio extends React.Component {
 
             <strong className={classes.subsubtitle}>Version 1 (HTML)</strong>
             <p>
-              The initial version created in late 2016 was a simple site created with HTML, Sass and Materialize.
-
-              This version was never made public.
+              The initial version created in late 2016 and was a simple site created with HTML, Sass
+              and Bootstrap. As additional project pages were added the CSS framework was ported to
+              Materialize. This version was never made public.
             </p>
 
             <strong className={classes.subsubtitle}>Version 2 (PHP)</strong>
             <p>
-              The second iteration of the site was rebuilt in PHP to aid maintainability and expand functionality.
+              The second iteration of the site was rebuilt in PHP to aid maintainability and expand
+              functionality. Using PHP allowed reusable components such as pagination, navigation bars,
+              footers, and skill progress bars. However these components were not easily maintainable
+              or readable.
+              This version's repository can be viewed <a className={classes.link} href="https://github.com/KyleGough/portfolio" target="_blank" rel="noopener noreferrer">here</a>.
             </p>
 
             <strong className={classes.subsubtitle}>Version 3 (React)</strong>
@@ -73,7 +77,7 @@ class Portfolio extends React.Component {
               effort to replicate most of the previous styling but making specific changes where necessary.
               The app was built starting from an initial create-react-app environment using Material UI for
               UI components, a mixture of vanilla CSS and CSS-in-JS for custom styling, and Express.js for the
-              server and routing.
+              server and routing. The current version's repository can be viewed <a className={classes.link} href="https://github.com/KyleGough/portfolio-react" target="_blank" rel="noopener noreferrer">here</a>.
             </p>
           </div>
 

@@ -119,7 +119,7 @@ class NavBar extends React.Component {
                   </ListItem>
                 </Link>
 
-                <a className={classes.drawerLink} href="http://github.com/KyleGough" target="_blank" rel="noopener noreferrer">
+                <a className={classes.drawerLink} href="https://github.com/KyleGough" target="_blank" rel="noopener noreferrer">
                   <ListItem button key="github">
                     <ListItemIcon><GitHubIcon /></ListItemIcon>
                     GitHub
@@ -147,7 +147,7 @@ class NavBar extends React.Component {
                     <Typography variant="h6" className={classes.linkTitle}>Skills</Typography>
                   </Link>
                   <Tooltip title="GitHub">
-                    <a className={classes.link} variant="inherit" href="http://github.com/KyleGough" target="_blank" rel="noopener noreferrer">
+                    <a className={classes.link} variant="inherit" href="https://github.com/KyleGough" target="_blank" rel="noopener noreferrer">
                       <IconButton className={classes.iconLink} color="inherit">
                         <GitHubIcon />
                       </IconButton>

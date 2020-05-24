@@ -78,6 +78,15 @@ class ProjectIntro extends React.Component {
               })
             : null
           }
+          {
+            data.chipsOther ?
+              data.chipsOther.map((item) => {
+                return (
+                  <Chip className={classes.chip} label={item} disabled variant="outlined" />
+                )   
+              })
+            : null
+          }
         </div>
     );
   }
