@@ -61,8 +61,8 @@ const theme = responsiveFontSizes(createMuiTheme({
     footerText: "#FFFFFF"
   },
   font: {
-    primary: "Lato",
-    secondary: "Merriweather"
+    primary: "Lato!important",
+    secondary: "Merriweather!important"
   },
   decoration: {
     imageShadow: "rgba(0, 0, 0, 0.14) 0px 2px 2px 0px, rgba(0, 0, 0, 0.12) 0px 1px 5px 0px, rgba(0, 0, 0, 0.2) 0px 3px 1px -2px",
@@ -85,6 +85,10 @@ const theme = responsiveFontSizes(createMuiTheme({
     fontWeight: 375,
   },
 }));
+
+// ns1.tsohost.co.uk
+// ns2.tsohost.co.uk
+// ns3.tsohost.co.uk
 
 
 class App extends React.Component {

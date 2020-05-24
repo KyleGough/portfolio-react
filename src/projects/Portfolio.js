@@ -53,11 +53,28 @@ class Portfolio extends React.Component {
 
           <div className={classes.section}>
             <Typography className={classes.subtitle} variant="h5" component="h2">Versions</Typography>
-            <ul className={classes.ul}>
-              <li><strong>v1</strong> - Initial version created in late 2016 was a simple site created with HTML, Sass and Materialize.</li>
-              <li><strong>v2</strong> - The second iteration of the site was rebuilt in PHP to aid maintainability and expand functionality.</li>
-              <li><strong>Current</strong> - The current version was rebuilt again in React due to its benefits and ease of use over PHP.</li>
-            </ul>
+
+            <strong className={classes.subsubtitle}>Version 1 (HTML)</strong>
+            <p>
+              The initial version created in late 2016 was a simple site created with HTML, Sass and Materialize.
+
+              This version was never made public.
+            </p>
+
+            <strong className={classes.subsubtitle}>Version 2 (PHP)</strong>
+            <p>
+              The second iteration of the site was rebuilt in PHP to aid maintainability and expand functionality.
+            </p>
+
+            <strong className={classes.subsubtitle}>Version 3 (React)</strong>
+            <p>
+              The current version was rebuilt again in May 2020 with React due to its benefits and ease of
+              use over PHP. After using React in multiple other projects, I decided to rebuild the site taking
+              effort to replicate most of the previous styling but making specific changes where necessary.
+              The app was built starting from an initial create-react-app environment using Material UI for
+              UI components, a mixture of vanilla CSS and CSS-in-JS for custom styling, and Express.js for the
+              server and routing.
+            </p>
           </div>
 
           <Divider />

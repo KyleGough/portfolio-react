@@ -11,6 +11,10 @@ import Pagination from '../components/Pagination';
 import Divider from '@material-ui/core/Divider';
 import useStyles from '../Styles';
 import ProjectList from './ProjectList';
+import Table from '@material-ui/core/Table';
+import TableBody from '@material-ui/core/TableBody';
+import TableCell from '@material-ui/core/TableCell';
+import TableRow from '@material-ui/core/TableRow';
 
 
 const projectInfo = ProjectList["sorting-algorithm-visualiser"];
@@ -38,6 +42,33 @@ const imageData = [
   },
 ];
 
+const algorithmTable = [
+  createRow("Bitonic", "Parallel sorting algorithm"),
+  createRow("Bogo", "Randomly permutates elements until fully sorted"),
+  createRow("Bubble", "Common simple algorithm"),
+  createRow("Cocktail", "Bubble sort in both directions"),
+  createRow("Comb", "Bubble sort variant with reducing gap"),
+  createRow("Cycle", "Optimised for minimal array writes"),
+  createRow("Gnome", "Insertion sort variant which swaps until element in correct position"),
+  createRow("Heap", "Builds heap and extracts from unsorted region"),
+  createRow("Insertion", "Builds sorted array one element at a time"),
+  createRow("JSort", "Builds heap then uses insertion sort"),
+  createRow("Merge", "Recursively merges half of the array"),
+  createRow("OddEven", "Compares all odd/even pairs then vice-versa"),
+  createRow("Pancake", "Flips array between regions"),
+  createRow("Permutation", "Compares every permutation of the array"),
+  createRow("Radix LSD", "Bucket sorts digits from least significant to most significant"),
+  createRow("Selection", "Builds sorted array one element at a time"),
+  createRow("Shell", "Bubble sort variant with reducing gap"),
+  createRow("Smooth", "Builds heap then extracts largest element"),
+  createRow("Stooge", "Recursively sorts first 2/3 then last 2/3"),
+  createRow("Quick", "Divide and conquer algorithm that uses a pivot")
+];
+
+function createRow(algorithm, description) {
+  return { algorithm: algorithm, description: description };
+}
+
 
 class SortingVisualiser extends React.Component {
 
@@ -56,10 +87,22 @@ class SortingVisualiser extends React.Component {
           <Divider /> 
 
           <div className={classes.section}>
+            <Typography className={classes.subtitle} variant="h5" component="h2">Overview</Typography>
+            <p>
+              Prior to this project, I had developed a simple CLI sorting algorithm visualiser in VB.net
+              featuring a limited selection of algorithms and options. Once I had familiarised myself with
+              C#, I decided to upgrade and rewrite the visualiser with a GUI, additional algorithms and
+              enhanced customisation. The project served as a great tool for improving my C# and
+              GUI design skills as well as futhering my understanding of how sorting algorithms operate,
+              scale and perform.
+            </p>
+          </div>
+
+          <div className={classes.section}>
             <Typography className={classes.subtitle} variant="h5" component="h2">Features</Typography>
             <ul className={classes.ul}>
               <li>Real-time visualiser which can be paused and stopped.</li>
-              <li>20 unique sorting algorithms (incl. Bubble, Quick, Merge, Insertion).</li>
+              <li>20 unique sorting algorithms.</li>
               <li>18 starting datasets to analyse the performance of each algorithm.</li>
               <li>Ability to compare two algorithms simultaneously.</li>
               <li>Customisable dataset size, range and delay.</li>
@@ -71,31 +114,18 @@ class SortingVisualiser extends React.Component {
 
           <div className={classes.section}>
             <Typography className={classes.subtitle} variant="h5" component="h2">Algorithms</Typography>
-            <ul className={classes.ul}>
-              <li><strong>Bitonic</strong> - Parallel sorting algorithm</li>
-              <li><strong>Bogo</strong> - Randomly permutates elements until fully sorted</li>
-              <li><strong>Bubble</strong> - Common simple algorithm</li>
-              <li><strong>Cocktail</strong> - Bubble sort in both directions</li>
-              <li><strong>Comb</strong> - Bubble sort variant with reducing gap</li>
-              <li><strong>Cycle</strong> - Optimised for minimal array writes</li>
-              <li><strong>Gnome</strong> - Insertion sort variant which swaps until element in correct position</li>
-              <li><strong>Heap</strong> - Builds heap and extracts from unsorted region</li>
-              <li><strong>Insertion</strong> - Builds sorted array one element at a time</li>
-              <li><strong>JSort</strong> - Builds heap then uses insertion sort</li>
-              <li><strong>Merge</strong> - Recursively merges half of the array</li>
-              <li><strong>OddEven</strong> - Compares all odd/even pairs then vice-versa</li>
-              <li><strong>Pancake</strong> - Flips array between regions</li>
-              <li><strong>Permutation</strong> - Compares every permutation of the array</li>
-              <li><strong>Radix LSD</strong> - Bucket sorts digits from least significant to most significant</li>
-              <li><strong>Selection</strong> - Builds sorted array one element at a time</li>
-              <li><strong>Shell</strong> - Bubble sort variant with reducing gap</li>
-              <li><strong>Smooth</strong> - Builds heap then extracts largest element</li>
-              <li><strong>Stooge</strong> - Recursively sorts first 2/3 then last 2/3</li>
-              <li><strong>Quick</strong> - Divide and conquer algorithm that uses a pivot</li>
-            </ul>
-          </div>
 
-          <Divider />
+            <Table className={classes.table} size="small" aria-label="a dense table">
+              <TableBody>
+                {algorithmTable.map((row) => (
+                  <TableRow key={row.name}>
+                    <TableCell component="th" scope="row">{row.algorithm}</TableCell>
+                    <TableCell>{row.description}</TableCell>
+                  </TableRow>
+                ))}
+              </TableBody>
+            </Table>
+          </div>
 
           <ImageList data={imageData} />
 

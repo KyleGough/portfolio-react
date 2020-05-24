@@ -145,7 +145,7 @@ const ProjectList = {
   "sorting-algorithm-visualiser": {
     title: "Sorting Algorithm Visualiser",
     date: "September 2015 - November 2015",
-    desc: "Visualises the sorting process on a dataset, highlights swapping and sorted elements in real-time. Supports 20 sorting algorithms including: Bubble & Quicksort. Options to change size of datasets, range of numbers in the dataset and delay. Ability to compare and visualise two sorting algorithms concurrently. Supports 18 types of start data including: Random, Normal Distribution, Sawtooth and Structured.",
+    desc: "Tool for visualising the sorting process on a generated dataset. Highlights swapping and sorted elements in real-time. Supports 20 different sorting algorithms including: Bubble, Mergesort and Quicksort. The visualiser is fully customisable with options to change the dataset size, range of values in the dataset and delay between each operation. The tool also has the ability to compare and visualise two sorting algorithms concurrently. The initial dataset can be one of 18 configurations such as: random, normally distributed or sawtooth.",
     image: "/img/sorting-algorithm-visualiser1.png",
     alt: "Sorting Algorithm Visualiser",
     link: "/projects/sorting-algorithm-visualiser",

@@ -30,6 +30,14 @@ const useStyles = theme => ({
       listStylePosition: "inside",
     }
   },
+  table: {
+    "& > tbody > tr > th": {
+      fontFamily: theme.font.primary
+    },
+    "& > tbody > tr > td": {
+      fontFamily: theme.font.primary
+    },
+  },
   link: {
     color: theme.palette.link,
     transitionDelay: "0.1s",
