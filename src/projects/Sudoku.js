@@ -175,8 +175,8 @@ class Sudoku extends React.Component {
           <Divider />
 
           <Pagination
-            previousTitle="QuRVe"
-            previousLink="/projects/qurve"
+            previousTitle="React Minesweeper"
+            previousLink="/projects/react-minesweeper"
             nextTitle="LucidLab"
             nextLink="/projects/lucidlab"
           />

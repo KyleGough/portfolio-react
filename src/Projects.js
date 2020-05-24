@@ -33,6 +33,8 @@ class Projects extends React.Component {
           <Divider />    
           <Project data={ProjectList["sudoku"]} />
           <Divider />
+          <Project data={ProjectList["react-minesweeper"]} />
+          <Divider />
           <Project data={ProjectList["qurve"]} />
           <Divider />
           <Project data={ProjectList["cave-exploration"]} />

@@ -26,13 +26,24 @@ const ProjectList = {
 
   "sudoku": {
     title: "Logical Sudoku Solver",
-    date: "October 2019 - December 2019",
+    date: "November 2019 - January 2020",
     desc: "CLI logical Sudoku solver that can solve expert level 9x9 Sudoku using only logical techniques and reasoning (in other words no brute forcing, guessing or backtracking). The program outputs a detailed description of the techniques and moves required at each step to solve unique solution Sudoku. The solver reads csv files where each puzzle can be separated by newline characters to allow batch solving. After processing all Sudoku in a given file, in-depth analysis is displayed including but not limited to: difficulty rating, occurrences of each technique, probability of each technique, processing time for each technique and total processing time.",
     image: "/img/sudoku1.png",
     alt: "Sudoku",
     link: "/projects/sudoku",
     github: "https://github.com/KyleGough/sudoku",
     chips: ["Python"]
+  },
+
+  "react-minesweeper": {
+    title: "React Minesweeper",
+    date: "October 2019",
+    desc: "First app using React. A simple clone of classic Minesweeper with an 18x18 board. Left click reveals tiles and right click flags tiles. Number of total mines and flagged tiles are shown.",
+    image: "/img/react-minesweeper1.png",
+    alt: "React Minesweeper",
+    link: "/projects/react-minesweeper",
+    github: "https://github.com/KyleGough/react-minesweeper",
+    chips: ["React", "JavaScript", "CSS", "Material UI"]
   },
 
   "qurve": {

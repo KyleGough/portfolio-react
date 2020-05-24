@@ -43,7 +43,7 @@ const skillsProgramming = [
 const skillsWeb = [
   ["JavaScript", "90", "Portfolio, LucidLab, QuRVe, Graph Algorithm Visualiser, RSCBot", "Confident"],
   ["HTML", "90", "Portfolio, BSplit, To Do List", "Confident"],
-  ["CSS", "90", "Portfolio, LucidLab, QuRVe, BSplit", "Confident"],
+  ["CSS", "90", "Portfolio, LucidLab, QuRVe, BSplit, Minesweeper", "Confident"],
   ["Sass", "50", "Portfolio", "Comfortable"],
   ["Less", "50", "QuRVe, React Minesweeper", "Comfortable"],
   ["PHP", "55", "BSplit, Portfolio", "Comfortable"]
@@ -51,12 +51,12 @@ const skillsWeb = [
 
 // List of web frameworks and libraries.
 const skillsWebOther = [
-  ["React", "65", "Portfolio, LucidLab, QuRVe", "Comfortable"],
+  ["React", "65", "Portfolio, LucidLab, QuRVe, Minesweeper", "Comfortable"],
   ["Node.js", "60", "Portfolio, LucidLab, QuRVe, URL Shortener", "Comfortable"],
   ["jQuery", "60", "BSplit, To Do List", "Comfortable"],
   ["Bootstrap", "65", "BSplit, To Do List, Portfolio", "Comfortable"],
   ["Materialize", "60", "Portfolio", "Comfortable"],
-  ["Material UI", "80", "LucidLab, Portfolio", "Confident"],
+  ["Material UI", "80", "LucidLab, Portfolio, Minesweeper", "Confident"],
   ["Webix", "55", "QuRVe", "Comfortable"]
 ];
 

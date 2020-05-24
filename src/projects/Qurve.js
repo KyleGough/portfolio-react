@@ -28,8 +28,8 @@ class Qurve extends React.Component {
           <Pagination
             previousTitle="Cave Exploration"
             previousLink="/projects/cave-exploration"
-            nextTitle="Logical Sudoku Solver"
-            nextLink="/projects/sudoku"
+            nextTitle="React Minesweeper"
+            nextLink="/projects/react-minesweeper"
           />
 
       </Container>

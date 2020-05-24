@@ -22,6 +22,7 @@ import NotFound from './NotFound';
 import Portfolio from './projects/Portfolio';
 import LucidLab from './projects/LucidLab';
 import Sudoku from './projects/Sudoku';
+import ReactMinesweeper from './projects/ReactMinesweeper';
 import Qurve from './projects/Qurve';
 import CaveExploration from './projects/CaveExploration';
 import RollerCoaster from './projects/RollerCoaster';
@@ -86,10 +87,6 @@ const theme = responsiveFontSizes(createMuiTheme({
   },
 }));
 
-// ns1.tsohost.co.uk
-// ns2.tsohost.co.uk
-// ns3.tsohost.co.uk
-
 
 class App extends React.Component {
   
@@ -109,6 +106,7 @@ class App extends React.Component {
                 <Route path="/projects/portfolio" component={Portfolio} />
                 <Route path="/projects/lucidlab" component={LucidLab} />
                 <Route path="/projects/sudoku" component={Sudoku} />
+                <Route path="/projects/react-minesweeper" component={ReactMinesweeper} />
                 <Route path="/projects/qurve" component={Qurve} />
                 <Route path="/projects/cave-exploration" component={CaveExploration} />
                 <Route path="/projects/roller-coaster" component={RollerCoaster} />
