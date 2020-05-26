@@ -89,7 +89,8 @@ class Project extends React.Component {
                               <Skeleton className={classes.skeleton} variant="rect" animation="wave" />
                               <img style={{ display: "none" }} className={classes.image} src={data.image} alt={data.alt} onLoad={this.imageLoad.bind(this)} />
                             </div>
-                      : null
+                        :
+                        <Skeleton className={classes.skeleton} variant="rect" animation={false} />
                     }
                 </Grid>
             </Grid>  

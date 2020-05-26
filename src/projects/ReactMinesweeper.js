@@ -1,7 +1,6 @@
 import React from 'react';
 import '../App.css';
 import Container from '@material-ui/core/Container';
-import Typography from '@material-ui/core/Typography';
 import PropTypes from 'prop-types';
 import {withStyles} from '@material-ui/core/styles';
 import ProjectIntro from '../components/ProjectIntro';
@@ -55,6 +54,10 @@ class ReactMinesweeper extends React.Component {
           
           <Divider /> 
 
+          {
+
+          }
+
           <ImageList data={imageData} />
 
           <Divider />
@@ -62,8 +65,8 @@ class ReactMinesweeper extends React.Component {
           <Pagination
             previousTitle="QuRVe"
             previousLink="/projects/qurve"
-            nextTitle="LucidLab"
-            nextLink="/projects/lucidlab"
+            nextTitle="Logical Sudoku Solver"
+            nextLink="/projects/sudoku"
           />
 
       </Container>

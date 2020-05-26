@@ -41,7 +41,7 @@ class NotFound extends React.Component {
           <Link className={classes.link} to="/about">View my skills</Link><br />
           <Link className={classes.link} to="/projects">View all my projects</Link><br />
           <Link className={classes.link} to="/CV.pdf" target="_blank" rel="noopener noreferrer">View my CV</Link><br />
-          <a className={classes.link} href="http://github.com/KyleGough" target="_blank" rel="noopener noreferrer">View my GitHub</a>
+          <a className={classes.link} href="https://github.com/KyleGough" target="_blank" rel="noopener noreferrer">View my GitHub</a>
         </div>
       </Container>
     );
