@@ -21,23 +21,23 @@ const projectInfo = ProjectList["sorting-algorithm-visualiser"];
 
 const imageData = [
   {
-    url: "/img/sorting-algorithm-visualiser1.png",
+    url: "/img/sorting-algorithm-visualiser1.jpg",
     title: "Unsorted dataset"
   },
   {
-    url: "/img/sorting-algorithm-visualiser2.png",
+    url: "/img/sorting-algorithm-visualiser2.jpg",
     title: "Random and sinusoidal datasets"
   },
   {
-    url: "/img/sorting-algorithm-visualiser3.png",
+    url: "/img/sorting-algorithm-visualiser3.jpg",
     title: "Bitonic sort and sorted dataset"
   },
   {
-    url: "/img/sorting-algorithm-visualiser4.png",
+    url: "/img/sorting-algorithm-visualiser4.jpg",
     title: "Dataset visualised as points"
   },
   {
-    url: "/img/sorting-algorithm-visualiser5.png",
+    url: "/img/sorting-algorithm-visualiser5.jpg",
     title: "Algorithm information modal"
   },
 ];

@@ -17,19 +17,19 @@ const projectInfo = ProjectList["lucidlab"];
 
 const imageData = [
   {
-    url: "/img/lucidlab1.png",
+    url: "/img/lucidlab1.jpg",
     title: "Upload test page"
   },
   {
-    url: "/img/lucidlab2.png",
+    url: "/img/lucidlab2.jpg",
     title: "Metrics page"
   },
   {
-    url: "/img/lucidlab3.png",
+    url: "/img/lucidlab3.jpg",
     title: "Upload IoT controller"
   },
   {
-    url: "/img/lucidlab4.png",
+    url: "/img/lucidlab4.jpg",
     title: "Upload image page"
   }
 ];

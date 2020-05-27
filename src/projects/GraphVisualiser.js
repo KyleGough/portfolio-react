@@ -17,27 +17,27 @@ const projectInfo = ProjectList["graph-algorithm-visualiser"];
 
 const imageData = [
   {
-    url: "/img/graph-algorithm-visualiser1.png",
+    url: "/img/graph-algorithm-visualiser1.jpg",
     title: "NN with 2-opt"
   },
   {
-    url: "/img/graph-algorithm-visualiser2.png",
+    url: "/img/graph-algorithm-visualiser2.jpg",
     title: "Generated nodes"
   },
   {
-    url: "/img/graph-algorithm-visualiser3.png",
+    url: "/img/graph-algorithm-visualiser3.jpg",
     title: "Algorithm infomation"
   },
   {
-    url: "/img/graph-algorithm-visualiser4.png",
+    url: "/img/graph-algorithm-visualiser4.jpg",
     title: "Graham scan"
   },
   {
-    url: "/img/graph-algorithm-visualiser5.png",
+    url: "/img/graph-algorithm-visualiser5.jpg",
     title: "Random route"
   },
   {
-    url: "/img/graph-algorithm-visualiser6.png",
+    url: "/img/graph-algorithm-visualiser6.jpg",
     title: "NN with 2-opt"
   }
 ];

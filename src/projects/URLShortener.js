@@ -17,11 +17,11 @@ const projectInfo = ProjectList["url-shortener"];
 
 const imageData = [
   {
-    url: "/img/url-shortener1.png",
+    url: "/img/url-shortener1.jpg",
     title: "Shortened URL"
   },
   {
-    url: "/img/url-shortener2.png",
+    url: "/img/url-shortener2.jpg",
     title: "Shortened URL"
   }
 ];

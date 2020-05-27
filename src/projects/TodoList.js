@@ -17,23 +17,23 @@ const projectInfo = ProjectList["todo-list"];
 
 const imageData = [
   {
-    url: "/img/todo-list1.png",
+    url: "/img/todo-list1.jpg",
     title: "Homepage"
   },
   {
-    url: "/img/todo-list2.png",
+    url: "/img/todo-list2.jpg",
     title: "Shopping list"
   },
   {
-    url: "/img/todo-list3.png",
+    url: "/img/todo-list3.jpg",
     title: "New user registration"
   },
   {
-    url: "/img/todo-list4.png",
+    url: "/img/todo-list4.jpg",
     title: "User lists"
   },
   {
-    url: "/img/todo-list5.png",
+    url: "/img/todo-list5.jpg",
     title: "Login"
   }
 ];

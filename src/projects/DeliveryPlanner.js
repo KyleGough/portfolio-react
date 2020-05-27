@@ -17,19 +17,19 @@ const projectInfo = ProjectList["delivery-route-planner"];
 
 const imageData = [
   {
-    url: "/img/delivery-route-planner1.png",
+    url: "/img/delivery-route-planner1.jpg",
     title: "Delivery view"
   },
   {
-    url: "/img/delivery-route-planner2.png",
+    url: "/img/delivery-route-planner2.jpg",
     title: "Route view"
   },
   {
-    url: "/img/delivery-route-planner3.png",
+    url: "/img/delivery-route-planner3.jpg",
     title: "Generated report"
   },
   {
-    url: "/img/delivery-route-planner4.png",
+    url: "/img/delivery-route-planner4.jpg",
     title: "Generated route"
   }
 ];

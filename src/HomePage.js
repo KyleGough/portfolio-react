@@ -43,19 +43,19 @@ const pageStyles = theme => ({
 
 const imageShowcase = [
   {
-    src: "/img/sudoku1.png",
+    src: "/img/sudoku1.jpg",
     title: "Logical Sudoku Solver"
   },
   {
-    src: "/img/cave-exploration1.png",
+    src: "/img/cave-exploration1.jpg",
     title: "Cave Exploration"
   },
   {
-    src: "/img/sorting-algorithm-visualiser1.png",
+    src: "/img/sorting-algorithm-visualiser1.jpg",
     title: "Sorting Algorithm Visualiser"
   },
   {
-    src: "/img/bsplit1.png",
+    src: "/img/bsplit1.jpg",
     title: "Bill Splitter"
   }
 ];

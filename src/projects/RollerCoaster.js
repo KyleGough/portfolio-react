@@ -17,19 +17,19 @@ const projectInfo = ProjectList["roller-coaster"];
 
 const imageData = [
   {
-    url: "/img/roller-coaster1.png",
+    url: "/img/roller-coaster1.jpg",
     title: "Back cart view"
   },
   {
-    url: "/img/roller-coaster2.png",
+    url: "/img/roller-coaster2.jpg",
     title: "Follow view"
   },
   {
-    url: "/img/roller-coaster3.png",
+    url: "/img/roller-coaster3.jpg",
     title: "Middle cart view"
   },
   {
-    url: "/img/roller-coaster4.png",
+    url: "/img/roller-coaster4.jpg",
     title: "Follow view"
   }
 ];

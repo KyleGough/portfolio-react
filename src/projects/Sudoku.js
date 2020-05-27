@@ -18,11 +18,11 @@ const projectInfo = ProjectList["sudoku"];
 
 const imageData = [
   {
-    url: "/img/sudoku1.png",
+    url: "/img/sudoku1.jpg",
     title: "X-Wing example"
   },
   {
-    url: "/img/sudoku2.png",
+    url: "/img/sudoku2.jpg",
     title: "XYZ-Wing example"
   }
 ];

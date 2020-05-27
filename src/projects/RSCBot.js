@@ -17,27 +17,27 @@ const projectInfo = ProjectList["rscbot"];
 
 const imageData = [
   {
-    url: "/img/rscbot1.png",
+    url: "/img/rscbot1.jpg",
     title: "Stock query"
   },
   {
-    url: "/img/rscbot2.png",
+    url: "/img/rscbot2.jpg",
     title: "Newsfeed"
   },
   {
-    url: "/img/rscbot3.png",
+    url: "/img/rscbot3.jpg",
     title: "Favourites selection"
   },
   {
-    url: "/img/rscbot4.png",
+    url: "/img/rscbot4.jpg",
     title: "News query"
   },
   {
-    url: "/img/rscbot5.png",
+    url: "/img/rscbot5.jpg",
     title: "Other queries"
   },
   {
-    url: "/img/rscbot6.png",
+    url: "/img/rscbot6.jpg",
     title: "Help modal"
   }
 ];

@@ -17,11 +17,11 @@ const projectInfo = ProjectList["cavern-minesweeper"];
 
 const imageData = [
   {
-    url: "/img/cavern-minesweeper1.png",
+    url: "/img/cavern-minesweeper1.jpg",
     title: "Finished game"
   },
   {
-    url: "/img/cavern-minesweeper2.png",
+    url: "/img/cavern-minesweeper2.jpg",
     title: "Started game"
   }
 ];

@@ -17,23 +17,23 @@ const projectInfo = ProjectList["bsplit"];
 
 const imageData = [
   {
-    url: "/img/bsplit1.png",
+    url: "/img/bsplit1.jpg",
     title: "Bill list"
   },
   {
-    url: "/img/bsplit2.png",
+    url: "/img/bsplit2.jpg",
     title: "Homepage"
   },
   {
-    url: "/img/bsplit3.png",
+    url: "/img/bsplit3.jpg",
     title: "New bill form"
   },
   {
-    url: "/img/bsplit4.png",
+    url: "/img/bsplit4.jpg",
     title: "Group list"
   },
   {
-    url: "/img/bsplit5.png",
+    url: "/img/bsplit5.jpg",
     title: "New group form"
   }
 ];

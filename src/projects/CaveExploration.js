@@ -17,15 +17,15 @@ const projectInfo = ProjectList["cave-exploration"];
 
 const imageData = [
   {
-    url: "/img/cave-exploration1.png",
+    url: "/img/cave-exploration1.jpg",
     title: "Multiple Drone Exploration"
   },
   {
-    url: "/img/cave-exploration2.png",
+    url: "/img/cave-exploration2.jpg",
     title: "Single Drone Exploration"
   },
   {
-    url: "/img/cave-exploration3.png",
+    url: "/img/cave-exploration3.jpg",
     title: "Single Drone Exploration"
   },
 ];

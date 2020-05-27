@@ -18,27 +18,27 @@ const projectInfo = ProjectList["portfolio"];
 
 const imageData = [
   {
-    url: "/img/portfolio1.png",
+    url: "/img/portfolio1.jpg",
     title: "Project page"
   },
   {
-    url: "/img/portfolio2.png",
+    url: "/img/portfolio2.jpg",
     title: "Skills page"
   },
   {
-    url: "/img/portfolio3.png",
+    url: "/img/portfolio3.jpg",
     title: "Project list page"
   },
   {
-    url: "/img/portfolio-projects-v1.png",
+    url: "/img/portfolio-projects-v1.jpg",
     title: "Portfolio project page v1"
   },
   {
-    url: "/img/portfolio-projects-v2.png",
+    url: "/img/portfolio-projects-v2.jpg",
     title: "Portfolio project page v2"
   },
   {
-    url: "/img/portfolio-projects-v3.png",
+    url: "/img/portfolio-projects-v3.jpg",
     title: "Portfolio project page v3"
   }
 ];

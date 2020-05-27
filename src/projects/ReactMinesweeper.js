@@ -16,23 +16,23 @@ const projectInfo = ProjectList["react-minesweeper"];
 
 const imageData = [
   {
-    url: "/img/react-minesweeper1.png",
+    url: "/img/react-minesweeper1.jpg",
     title: "Completed game"
   },
   {
-    url: "/img/react-minesweeper2.png",
+    url: "/img/react-minesweeper2.jpg",
     title: "Partially completed game"
   },
   {
-    url: "/img/react-minesweeper3.png",
+    url: "/img/react-minesweeper3.jpg",
     title: "Lost game"
   },
   {
-    url: "/img/react-minesweeper4.png",
+    url: "/img/react-minesweeper4.jpg",
     title: "Initial board"
   },
   {
-    url: "/img/react-minesweeper5.png",
+    url: "/img/react-minesweeper5.jpg",
     title: "App intro"
   }
 ];
