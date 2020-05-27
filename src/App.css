@@ -16,16 +16,6 @@ a {
   text-decoration: none;
 }
 
-/* Headers. */
-h1, h2, h3, h4, h5, h6 {
-  font-family: 'Merriweather', sans-serif;
-}
-
-/* Code block. */
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
-}
-
 /* Removes styling on inputs. */
 input,
 input:focus,
@@ -98,7 +88,6 @@ input:hover {
   line-height: 100%!important;
   vertical-align: middle!important;
   text-shadow: 1px 1px 2px!important;
-  /*background-color: rgba(0,0,0,0.75)!important;*/
 }
 
 /* Centers navigation dots. */
