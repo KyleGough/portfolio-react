@@ -15,7 +15,8 @@ const useStyles = theme => ({
   },
   subsubtitle: {
     display: "block",
-    paddingTop: "2em"
+    paddingTop: "1em",
+    paddingBottom: "1em"
   },
   section: {
     paddingBottom: "2em",
