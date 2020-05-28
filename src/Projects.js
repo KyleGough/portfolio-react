@@ -79,19 +79,17 @@ class Projects extends React.Component {
           <FormControl className={classes.formControl}>
             <InputLabel id="language-select-label">Filter Projects</InputLabel>
             <Select
-              
               id="language-select"
               value={this.state.language}
               onChange={this.handleChange}
               label="Language"
               input={<CustomInput />}
             >
-              <MenuItem value="All">
-                <em>All</em>
-              </MenuItem>
+              <MenuItem className={classes.menuItem} value="All">All</MenuItem>
+              <Divider />
               {
                 languageList.map((language) => (
-                  <MenuItem value={language}>{language}</MenuItem>
+                  <MenuItem className={classes.menuItem} value={language}>{language}</MenuItem>
                 ))
               }
             </Select>

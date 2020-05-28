@@ -53,6 +53,12 @@ const useStyles = theme => ({
   formControl: {
     minWidth: 240,
     marginBottom: "2em"
+  },
+  menuItem: {
+    color: theme.palette.link,
+    "&:hover": {
+      color: theme.palette.linkHover
+    }
   }
 });
 
