@@ -74,16 +74,24 @@ const theme = responsiveFontSizes(createMuiTheme({
   linkButton: {
     marginTop: "0.5em",
     background: "linear-gradient(149deg, rgba(238,78,45,1) 0%, rgba(231,133,8,1) 60%, rgba(233,118,14,1) 100%)", 
-    borderRadius: 3,
+    borderRadius: 40,
     border: 0,
     color: "white",
     height: 48,
     padding: "0 30px",
-    boxShadow: "0 3px 5px 2px rgba(255, 105, 135, .3)",
+    boxShadow: "0 3px 5px 2px rgba(255, 105, 135, 0.33)",
     textTransform: "none",
     fontFamily: "Lato",
     fontSize: "1rem",
-    fontWeight: 375,
+    fontWeight: 300,
+    transitionDelay: "0.1s",
+    transitionDuration: "0.2s",
+    transitionProperty: "all",
+    transitionTimingFunction: "ease",
+    "&:hover": {
+      boxShadow: "0 3px 5px 2px rgba(233, 118, 14, 0.5)",
+      background: "linear-gradient(32deg, rgba(238,78,45,1) 0%, rgba(231,133,8,1) 50%, rgba(233,118,14,1) 100%)"
+    }
   },
 }));
 
