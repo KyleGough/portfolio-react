@@ -95,8 +95,16 @@ input:hover {
   padding-left: 0!important;
 }
 
+/* Square dot. */
+.dot {
+  width: 20px!important;
+  height: 6px!important;
+  border-radius: 10%!important;
+}
+
 .carousel.carousel-slider {
-  height: 25vw!important;
+  height: 30vw!important;
+  border-radius: 6px!important;
 }
 
 .MuiFormLabel-root.Mui-focused {
