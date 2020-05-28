@@ -50,6 +50,10 @@ const useStyles = theme => ({
     },
     whiteSpace: "nowrap",
   },
+  formControl: {
+    minWidth: 240,
+    marginBottom: "2em"
+  }
 });
 
 export default useStyles;

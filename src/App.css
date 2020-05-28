@@ -95,7 +95,10 @@ input:hover {
   padding-left: 0!important;
 }
 
-
 .carousel.carousel-slider {
   height: 25vw!important;
+}
+
+.MuiFormLabel-root.Mui-focused {
+  color: #4CAF50!important;
 }

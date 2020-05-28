@@ -26,15 +26,16 @@ const useStyles = theme => ({
     },
     image: {
         width: "100%",
-        display: "inline-block",
+        //position: "absolute",
+        //top: "50%",
+        //transform: "translateY(-50%)",
         height: "auto",
         boxShadow: theme.decoration.imageShadow,
         verticalAlign: "middle"
     },
     imageHelper: {
-        display: "inline-block",
-        height: "100%",
-        verticalAlign: "middle"
+        //position: "relative",
+        height: "100%"
     },
     viewButton: theme.linkButton,
     viewButtonLink: {
@@ -109,7 +110,7 @@ class Project extends React.Component {
                         : null
                     }
                 </Grid>
-                <Grid className={classes.columnBlock} container item xs={12} md={5}>
+                <Grid className={classes.columnBlock} alignContents="center" alignItems="center" container item xs={12} md={5}>
                     {
                       data.image ?
                         this.state.loaded ?

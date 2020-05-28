@@ -8,12 +8,62 @@ import Divider from '@material-ui/core/Divider';
 import Project from './components/Project';
 import ProjectList from './projects/ProjectList';
 import useStyles from './Styles';
+import InputLabel from '@material-ui/core/InputLabel';
+import MenuItem from '@material-ui/core/MenuItem';
+import FormControl from '@material-ui/core/FormControl';
+import Select from '@material-ui/core/Select';
+import InputBase from '@material-ui/core/InputBase';
+
+
+const CustomInput = withStyles((theme) => ({
+  root: {
+    "label + &": {
+      marginTop: theme.spacing(3),
+    },
+  },
+  input: {
+    borderRadius: 4,
+    position: "relative",
+    backgroundColor: theme.palette.background.paper,
+    border: "1px solid #4CAF50",
+    fontSize: 16,
+    padding: "10px 26px 10px 12px",
+    transition: theme.transitions.create(["border-color", "box-shadow"]),
+    fontFamily: theme.font.primary,
+    "&:focus": {
+      borderColor: "#4CAF50"
+    },
+  },
+}))(InputBase);
+
+const projectTitleList = [
+  "portfolio", "lucidlab", "sudoku", "react-minesweeper", "qurve",
+  "cave-exploration", "roller-coaster", "rscbot", "url-shortener",
+  "graph-algorithm-visualiser", "cavern-minesweeper", "bsplit",
+  "todo-list", "delivery-route-planner", "sorting-algorithm-visualiser"
+];
+
+const languageList = [
+  "C#", "C++", "JavaScript", "PHP", "Python", "React", "SQL", "Games/Puzzles", "Group Projects", "Web"
+];
 
 
 class Projects extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      language: "All"
+    };
+    this.handleChange = this.handleChange.bind(this);
+  }
+
 
   componentDidMount(){
     document.title = "Project List";
+  }
+
+  handleChange(e) {
+    this.setState({ language: e.target.value });
   }
 
   render() {
@@ -26,36 +76,49 @@ class Projects extends React.Component {
           <Typography className={classes.title} variant="h3" component="h1">Projects</Typography>
           </div>
 
-          <Divider />
-          <Project data={ProjectList["portfolio"]} />
-          <Divider /> 
-          <Project data={ProjectList["lucidlab"]} />
-          <Divider />    
-          <Project data={ProjectList["sudoku"]} />
-          <Divider />
-          <Project data={ProjectList["react-minesweeper"]} />
-          <Divider />
-          <Project data={ProjectList["qurve"]} />
-          <Divider />
-          <Project data={ProjectList["cave-exploration"]} />
-          <Divider />
-          <Project data={ProjectList["roller-coaster"]} />
-          <Divider />
-          <Project data={ProjectList["rscbot"]} />
-          <Divider />
-          <Project data={ProjectList["url-shortener"]} />
-          <Divider />
-          <Project data={ProjectList["graph-algorithm-visualiser"]} />
-          <Divider />
-          <Project data={ProjectList["cavern-minesweeper"]} />
-          <Divider />
-          <Project data={ProjectList["bsplit"]} />
-          <Divider />
-          <Project data={ProjectList["todo-list"]} />
-          <Divider />
-          <Project data={ProjectList["delivery-route-planner"]} />
-          <Divider />
-          <Project data={ProjectList["sorting-algorithm-visualiser"]} />
+          <FormControl className={classes.formControl}>
+            <InputLabel id="language-select-label">Filter Projects</InputLabel>
+            <Select
+              
+              id="language-select"
+              value={this.state.language}
+              onChange={this.handleChange}
+              label="Language"
+              input={<CustomInput />}
+            >
+              <MenuItem value="All">
+                <em>All</em>
+              </MenuItem>
+              {
+                languageList.map((language) => (
+                  <MenuItem value={language}>{language}</MenuItem>
+                ))
+              }
+            </Select>
+          </FormControl>
+
+          {
+            projectTitleList.map((projectName) => {
+              const chips = ProjectList[projectName].chips ? ProjectList[projectName].chips : [];
+              const chipsOld = ProjectList[projectName].chipsOld ? ProjectList[projectName].chipsOld : [];
+              const chipsOther = ProjectList[projectName].chipsOther ? ProjectList[projectName].chipsOther : []; 
+              const categories = ProjectList[projectName].categories ? ProjectList[projectName].categories : []; 
+              const allChips = chips.concat(chipsOld).concat(chipsOther).concat(categories);
+
+              if (this.state.language === "All" || allChips.includes(this.state.language)) {
+                return (
+                  <React.Fragment>
+                    <Divider />
+                    <Project data={ProjectList[projectName]} />
+                  </React.Fragment>
+                );
+              }
+              else {
+                return null;
+              }               
+            })
+          }
+
           <Divider />
 
       </Container>

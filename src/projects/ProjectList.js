@@ -9,7 +9,8 @@ const ProjectList = {
     link: "/projects/portfolio",
     github: "https://github.com/KyleGough/portfolio-react",
     chips: ["React", "JavaScript", "Material UI", "HTML", "CSS", "Node"],
-    chipsOld: ["PHP", "Sass", "Bootstrap", "Materialize"]
+    chipsOld: ["PHP", "Sass", "Bootstrap", "Materialize"],
+    categories: ["Web"]
   },
 
   "lucidlab": {
@@ -21,7 +22,8 @@ const ProjectList = {
     alt: "LucidLab",
     link: "/projects/lucidlab",
     chips: ["React", "JavaScript", "Material UI", "HTML", "CSS"],
-    chipsOther: ["Python", "Shell", "C", "SQL"]
+    chipsOther: ["Python", "Shell", "C", "SQL"],
+    categories: ["Web", "Group Projects"]
   },
 
   "sudoku": {
@@ -32,7 +34,8 @@ const ProjectList = {
     alt: "Sudoku",
     link: "/projects/sudoku",
     github: "https://github.com/KyleGough/sudoku",
-    chips: ["Python"]
+    chips: ["Python"],
+    categories: ["CLI", "Games/Puzzles"]
   },
 
   "react-minesweeper": {
@@ -43,7 +46,8 @@ const ProjectList = {
     alt: "React Minesweeper",
     link: "/projects/react-minesweeper",
     github: "https://github.com/KyleGough/react-minesweeper",
-    chips: ["React", "JavaScript", "CSS", "Material UI"]
+    chips: ["React", "JavaScript", "CSS", "Material UI"],
+    categories: ["Web", "Games/Puzzles"]
   },
 
   "qurve": {
@@ -52,7 +56,8 @@ const ProjectList = {
     date: "June 2019 - August 2019",
     desc: "Designed and created an updated UI for the application QuRVe, a credit tech tool using JavaScript, Webix, React and Less. Implemented an interface to retrieve financial instruments data with a configurable dashboard showing graphs, pivot tables and descriptions of selected securities.",
     link: "/projects/qurve",
-    chips: ["React", "JavaScript", "Webix", "Less", "CSS"]
+    chips: ["React", "JavaScript", "Webix", "Less", "CSS"],
+    categories: ["Web"]
   },
 
   "cave-exploration": {
@@ -87,7 +92,8 @@ const ProjectList = {
     alt: "RSCBot",
     link: "/projects/rscbot",
     chips: ["JavaScript", "jQuery", "HTML", "CSS", "Materialize"],
-    chipsOther: ["PHP", "SQL"]
+    chipsOther: ["PHP", "SQL"],
+    categories: ["Web", "Group Projects"]
   },
 
   "url-shortener": {
@@ -97,7 +103,8 @@ const ProjectList = {
     image: "/img/url-shortener1.jpg",
     alt: "URL Shortener",
     link: "/projects/url-shortener",
-    chips: ["JavaScript", "Node", "MongoDB", "jQuery", "HTML", "CSS", "Materialize"]
+    chips: ["JavaScript", "Node", "MongoDB", "jQuery", "HTML", "CSS", "Materialize"],
+    categories: ["Web"]
   },
 
   "graph-algorithm-visualiser": {
@@ -108,7 +115,8 @@ const ProjectList = {
     alt: "Graph Algorithm Visualiser",
     link: "/projects/graph-algorithm-visualiser",
     github: "https://github.com/KyleGough/graph-algorithm-visualiser",
-    chips: ["JavaScript"]
+    chips: ["JavaScript"],
+    categories: ["Web"]
   },
 
   "cavern-minesweeper": {
@@ -119,7 +127,8 @@ const ProjectList = {
     alt: "Cavern Minesweeper",
     link: "/projects/cavern-minesweeper",
     github: "https://github.com/KyleGough/cavern-minesweeper",
-    chips: ["Ruby"]
+    chips: ["Ruby"],
+    categories: ["Games/Puzzles"]
   },
 
   "bsplit": {
@@ -130,7 +139,8 @@ const ProjectList = {
     image: "/img/bsplit1.jpg",
     alt: "BSplit",
     link: "/projects/bsplit",
-    chips: ["PHP", "JavaScript", "jQuery", "SQL", "HTML", "CSS", "Bootstrap"]
+    chips: ["PHP", "JavaScript", "jQuery", "SQL", "HTML", "CSS", "Bootstrap"],
+    categories: ["Web"]
   },
 
   "todo-list": {
@@ -141,7 +151,8 @@ const ProjectList = {
     image: "/img/todo-list1.jpg",
     alt: "To Do List",
     link: "/projects/todo-list",
-    chips: ["PHP", "JavaScript", "jQuery", "SQL", "HTML", "CSS"]
+    chips: ["PHP", "JavaScript", "jQuery", "SQL", "HTML", "CSS"],
+    categories: ["Web"]
   },
 
   "delivery-route-planner": {
