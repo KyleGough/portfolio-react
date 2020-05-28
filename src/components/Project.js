@@ -26,18 +26,46 @@ const useStyles = theme => ({
     },
     image: {
         width: "100%",
-        display: "block",
+        display: "inline-block",
         height: "auto",
-        boxShadow: theme.decoration.imageShadow
+        boxShadow: theme.decoration.imageShadow,
+        verticalAlign: "middle"
+    },
+    imageHelper: {
+        display: "inline-block",
+        height: "100%",
+        verticalAlign: "middle"
     },
     viewButton: theme.linkButton,
+    viewButtonLink: {
+        [theme.breakpoints.down("sm")]: {
+            display: "inline-block"    
+        }
+    },
+    viewButtonWrapper: {
+        [theme.breakpoints.down("sm")]: {
+            textAlign: "center"
+        }
+    },
     github: {
         marginTop: "0.85em",
         marginLeft: "1em",
         marginRight: "1em",
     },
+    githubLink: {
+        float: "right"
+    },
     skeleton: {
-        height: "19em"
+        height: "19em",
+        [theme.breakpoints.down("sm")]: {
+            height: "10px"
+        }
+    },
+    skeletonNoImage: {
+        height: "19em",
+        [theme.breakpoints.down("sm")]: {
+            display: "none"
+        }
     }
 });
 
@@ -59,38 +87,42 @@ class Project extends React.Component {
         
         return (
             <Grid className={classes.root} container spacing={3}>
-                <Grid className={classes.columnBlock} container item xs={12} lg={7}>
-                    <Typography className={classes.title} variant="h5" component="h2">{data.title}</Typography>
-                    { data.subtitle ? <Typography className={classes.subtitle} variant="h6" component="h3">{data.subtitle}</Typography> : null }
-                    <p className={classes.date}>{data.date}</p>
-                    <p className={classes.desc}>{data.desc}</p>
-                    { data.link ? 
-                        <Link to={data.link}>
-                          <Button className={classes.viewButton}>View Project</Button>
-                        </Link>
-                        : null
-                    }
+                <Grid className={classes.columnBlock} container item xs={12} md={7}>
                     { data.github ? 
-                      <a href={data.github} target="_blank" rel="noopener noreferrer">
-                        <IconButton className={classes.github} color="secondary" aria-label="github">
+                      <a className={classes.githubLink} href={data.github} target="_blank" rel="noopener noreferrer">
+                        <IconButton color="secondary" aria-label="github">
                           <GitHubIcon />
                         </IconButton>
                       </a>
                       : null
                     }
+                    <Typography className={classes.title} variant="h5" component="h2">{data.title}</Typography>
+                    { data.subtitle ? <Typography className={classes.subtitle} variant="h6" component="h3">{data.subtitle}</Typography> : null }
+                    <p className={classes.date}>{data.date}</p>
+                    <p className={classes.desc}>{data.desc}</p>
+                    { data.link ? 
+                        <div className={classes.viewButtonWrapper}>
+                          <Link className={classes.viewButtonLink} to={data.link}>
+                            <Button className={classes.viewButton}>View Project</Button>
+                          </Link>
+                        </div>
+                        : null
+                    }
                 </Grid>
-                <Grid className={classes.columnBlock} container item xs={12} lg={5}>
+                <Grid className={classes.columnBlock} container item xs={12} md={5}>
                     {
                       data.image ?
-                        this.state.loaded ? 
-                            <img className={classes.image} src={data.image} alt={data.alt} onLoad={this.imageLoad.bind(this)} />
+                        this.state.loaded ?
+                            <div className={classes.imageHelper}>
+                              <img className={classes.image} src={data.image} alt={data.alt} onLoad={this.imageLoad.bind(this)} />
+                            </div>
                             : 
-                            <div>
+                            <React.Fragment>
                               <Skeleton className={classes.skeleton} variant="rect" animation="wave" />
                               <img style={{ display: "none" }} className={classes.image} src={data.image} alt={data.alt} onLoad={this.imageLoad.bind(this)} />
-                            </div>
+                            </React.Fragment>
                         :
-                        <Skeleton className={classes.skeleton} variant="rect" animation={false} />
+                        <Skeleton className={classes.skeletonNoImage} variant="rect" animation={false} />
                     }
                 </Grid>
             </Grid>  

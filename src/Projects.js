@@ -56,6 +56,7 @@ class Projects extends React.Component {
           <Project data={ProjectList["delivery-route-planner"]} />
           <Divider />
           <Project data={ProjectList["sorting-algorithm-visualiser"]} />
+          <Divider />
 
       </Container>
     );

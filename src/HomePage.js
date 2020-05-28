@@ -9,10 +9,24 @@ import Divider from '@material-ui/core/Divider';
 import Grid from '@material-ui/core/Grid';
 import { Carousel } from 'react-responsive-carousel';
 import "react-responsive-carousel/lib/styles/carousel.min.css"; 
-import useStyles from './Styles';
+import commonStyles from './Styles';
+import Typography from '@material-ui/core/Typography';
 
 
 const pageStyles = theme => ({
+  title: {
+    paddingTop: "1em",
+    display: "block"  
+  },
+  subtitle: {
+    paddingBottom: "1em",
+    display: "block"
+  },
+  headline: {
+    display: "block",
+    textAlign: "left",
+    float: "left"
+  },
   listitem: {
     fontSize: "14px",
     fontFamily: theme.font.primary,
@@ -40,6 +54,8 @@ const pageStyles = theme => ({
     marginTop: "1.25em"
   }
 });
+
+const mergedStyles = theme => Object.assign(commonStyles(theme), pageStyles(theme));
 
 const imageShowcase = [
   {
@@ -71,7 +87,43 @@ class HomePage extends React.Component {
     const { classes } = this.props;
 
     return (
-      <Container className={classes.root} maxWidth="lg">
+      <Container className={classes.root} maxWidth="lg">        
+                
+        <div className={classes.section}>          
+         
+          <Grid container spacing={3}>
+            <Grid container item xs={12} sm={7}>
+              <Typography className={classes.title} variant="h3" component="h1">Portfolio</Typography>
+              <p className={classes.intro}>
+                Hello and welcome to my portfolio website showcasing my programming projects. 
+                I'm a 4<sup>th</sup> year Computer Science MEng student at the University of Warwick
+                who enjoys programming and web development. My most recent projects include a complete rebuild
+                of this website from PHP to React and a logical Sudoku solver written in Python.
+              </p>                   
+            </Grid>
+            <Grid className={classes.columnBlock} container item xs={12} sm={5}>
+             
+            </Grid>
+          </Grid>  
+
+          
+          <Grid className={classes.gridLink} container spacing={3}>
+            <Grid container item xs={12} sm={6}>
+              <Link to="/projects">
+                <Button className={classes.linkButton}>Project List</Button>
+              </Link>
+              <p className={classes.linkDesc}>View a list of all my programming projects</p>
+            </Grid>
+            <Grid className={classes.columnBlock} container item xs={12} sm={6}>
+              <Link to="/about">
+                <Button className={classes.linkButton}>About Me</Button>
+              </Link>  
+              <p className={classes.linkDesc}>View my skills and additional information</p>
+            </Grid>
+          </Grid>  
+        </div>
+
+        <Divider />
 
         <div className={classes.imgShowcase}>
           <Carousel
@@ -94,31 +146,6 @@ class HomePage extends React.Component {
           </Carousel>
         </div>
         
-        <Divider />
-                
-        <div className={classes.section}>
-          <p className={classes.intro}>
-            Hello and welcome to my portfolio website showcasing my programming projects. 
-            I'm a 4<sup>th</sup> year Computer Science MEng student at the University of Warwick
-            who enjoys programming and web development. My most recent projects include a complete rebuild of this website in
-            React and a logical Sudoku solver written in Python.
-          </p>
-       
-          <Grid className={classes.gridLink} container spacing={3}>
-            <Grid container item xs={12} sm={6}>
-              <Link to="/projects">
-                <Button className={classes.linkButton}>Project List</Button>
-              </Link>
-              <p className={classes.linkDesc}>View a list of all my programming projects</p>
-            </Grid>
-            <Grid className={classes.columnBlock} container item xs={12} sm={6}>
-              <Link to="/about">
-                <Button className={classes.linkButton}>About Me</Button>
-              </Link>  
-              <p className={classes.linkDesc}>View my skills and additional information</p>
-            </Grid>
-          </Grid>  
-        </div>
 
       </Container>
     );
@@ -130,4 +157,4 @@ HomePage.propTypes = {
     classes: PropTypes.object.isRequired
 };  
 
-export default withStyles(pageStyles)(withStyles(useStyles)(HomePage));
+export default withStyles(mergedStyles)(HomePage);

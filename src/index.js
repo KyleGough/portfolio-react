@@ -72,7 +72,7 @@ const theme = responsiveFontSizes(createMuiTheme({
     linkButtonShadow: "0 3px 5px 2px rgba(255, 105, 135, .3)"
   },
   linkButton: {
-    marginTop: "1em",
+    marginTop: "0.5em",
     background: "linear-gradient(149deg, rgba(238,78,45,1) 0%, rgba(231,133,8,1) 60%, rgba(233,118,14,1) 100%)", 
     borderRadius: 3,
     border: 0,
