@@ -10,6 +10,7 @@ import Pagination from '../components/Pagination';
 import Divider from '@material-ui/core/Divider';
 import useStyles from '../Styles';
 import ProjectList from './ProjectList';
+import Typography from '@material-ui/core/Typography';
 
 
 const projectInfo = ProjectList["react-minesweeper"];
@@ -54,9 +55,12 @@ class ReactMinesweeper extends React.Component {
           
           <Divider /> 
 
-          {
-
-          }
+          <div className={classes.section}>
+            <Typography className={classes.subtitle} variant="h5" component="h2">Live Project</Typography>
+            <p>The project can be viewed and played at <a className={classes.link} href="https://kylegough-minesweeper.herokuapp.com/" target="_blank" rel="noopener noreferrer">https://kylegough-minesweeper.herokuapp.com/</a></p>
+          </div>
+                    
+          <Divider /> 
 
           <ImageList data={imageData} />
 
