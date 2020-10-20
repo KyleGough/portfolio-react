@@ -86,7 +86,7 @@ class Footer extends React.Component {
                         <Grid className={classes.grid} item xs={12} lg={4}>
                         <Container maxWidth="sm">
                             <h5 className={classes.footerTitle}>About Me</h5>
-                            <p>4<sup>th</sup> Year Computer Science MEng Student at Warwick University. Programmer and Web Developer with interests in Bouldering, Cycling, Guitar, Movies and Physics.</p>
+                            <p>Computer Science MEng. Tech Analyst at Bank of America. Programmer and Web Developer with interests in Bouldering, Cycling, Guitar, Movies and Physics.</p>
                             <EmailIcon className={classes.email}/><span>  <a className={classes.link} href="mailto:kylegough98@gmail.com">kylegough@gmail.com</a></span>
                         </Container>
                         </Grid>

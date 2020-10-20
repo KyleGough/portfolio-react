@@ -93,7 +93,8 @@ class About extends React.Component {
           <div className={classes.section}>
           <Typography className={classes.title} variant="h3" component="h1">About Me</Typography>
           <p className={classes.intro}>
-             Currently, I am a 4<sup>th</sup> year Computer Science MEng student at the University of Warwick.
+             Currently I am a Tech Analyst at Bank of America and most recently a graduate of University of Warwick
+             with a 1<sup>st</sup> class honours MEng degree in Computer Science.
              I enjoy learning new languages, frameworks and technologies outside of the regular
              university ciriculum such as: C#, Ruby, Node, React, Zsh, Sass, Bootstrap, Materialize,
              Material UI and MongoDB. I have also created some projects using

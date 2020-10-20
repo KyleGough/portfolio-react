@@ -142,7 +142,7 @@ class HomePage extends React.Component {
               <Typography className={classes.title} variant="h3" component="h1">Portfolio</Typography>
               <p className={classes.intro}>
                 Hello and welcome to my portfolio website showcasing my programming projects. 
-                I'm a 4<sup>th</sup> year Computer Science MEng student at the University of Warwick
+                I'm a recent Computer Science MEng graduate of the University of Warwick
                 who enjoys programming and web development. My most recent projects include a complete rebuild
                 of this website from PHP to React and a logical Sudoku solver written in Python.
               </p>                   
