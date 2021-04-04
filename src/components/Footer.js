@@ -118,7 +118,7 @@ class Footer extends React.Component {
                     </Grid>
                 </Container>
                 <Container className={classes.copyright} maxWidth={false}>
-                    <p>© Kyle Gough, 2020</p>
+                    <p>© Kyle Gough, 2021</p>
                 </Container>
             </footer>
         );
