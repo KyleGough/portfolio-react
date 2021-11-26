@@ -35,7 +35,7 @@ const useStyles = theme => ({
         color: theme.palette.navText,
         outline: "0px",
         fontFamily: theme.font.primary,
-        transition: "border-bottom 0.2s ease-out 0.05s",
+        transition: "border-bottom 0s ease-out 0.05s",
         borderBottom: "2px solid transparent",
         height: "64px",
         lineHeight: "64px",
@@ -46,8 +46,7 @@ const useStyles = theme => ({
     },
     drawerLink: {
       color: theme.palette.link,
-      transitionDelay: "0.1s",
-      transitionDuration: "0.2s",
+      transitionDuration: "0.05s",
       transitionProperty: "all",
       transitionTimingFunction: "ease",
       "&:hover": {
