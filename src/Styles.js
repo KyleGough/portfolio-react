@@ -41,8 +41,7 @@ const useStyles = theme => ({
   },
   link: {
     color: theme.palette.link,
-    transitionDelay: "0.05s",
-    transitionDuration: "0.1s",
+    transitionDuration: "0.05s",
     transitionProperty: "all",
     transitionTimingFunction: "ease",
     "&:hover": {
